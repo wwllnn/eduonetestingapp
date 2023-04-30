@@ -1,0 +1,37 @@
+.test{
+  display: flex;
+  background-color: green;
+}
+
+.test-nav{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .1rem;
+  width: 150px;
+  height: 200px;
+  margin: 5rem;
+  background-color: purple;
+}
+
+.active-nav-button{
+  width: 25px;
+  height: 25px;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+}
+
+.nav-button{
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid black;
+  cursor: pointer;
+}

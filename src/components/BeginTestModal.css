@@ -1,0 +1,52 @@
+.begintestmodal-background{
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 50%;
+}
+
+.begintestmodal-modal{
+  background-color: white;
+  width: 400px;
+  height: 450px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 3rem;
+}
+
+.begintestmodal-exit{
+  position: absolute;
+  right: 1.5rem;
+  top: .5rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.begintestmodal-message1b{
+  font-weight: bold;
+}
+
+.begintestmodal-start{
+  width: 200px;
+  height: 50px;
+  background-color: #008dcc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+}
