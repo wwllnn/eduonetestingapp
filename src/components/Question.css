@@ -2,6 +2,65 @@
   max-width: 600px;
   height: 600px;
   background-color: white;
-  padding: 1rem;
+  padding: 3rem;
   border-radius: 12px;
+  overflow-y: auto;
+}
+
+.question-question{
+  margin-top: 1rem;
+}
+
+.question-choiceline{
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.question-choicelineselected{
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  border: 3px solid #0082ef;
+  padding: 8px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.question-choiceline:hover{
+  border: 3px solid rgb(48, 161, 205);
+  padding: 8px;
+}
+
+.question-choiceletter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  padding: .5rem;
+  border: 1px solid black;
+  border-radius: 500px;
+}
+
+.question-choiceletterselected{
+  padding: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  margin-right: .5rem;
+  border-radius: 100px;
+  background-color: #0082ef;
+  color: white;
+  border: 1px solid #0082ef;
+}
+
+.question-choice{
+  margin-left: 1rem;
 }

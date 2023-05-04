@@ -1,21 +1,27 @@
 .test{
   display: flex;
-  background-color: green;
+}
+
+.nav-header{
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .test-nav{
   display: flex;
   flex-wrap: wrap;
-  gap: .1rem;
-  width: 150px;
+  gap: .5rem;
+  width: 200px;
   height: 200px;
-  margin: 5rem;
-  background-color: purple;
+}
+
+.nav-left{
+  margin-right: 7rem;
 }
 
 .active-nav-button{
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   color: white;
   background-color: black;
   display: flex;
@@ -25,8 +31,8 @@
 }
 
 .nav-button{
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -34,4 +40,21 @@
   border-radius: 100px;
   border: 1px solid black;
   cursor: pointer;
+}
+
+.test-next{
+  width: 140px;
+  height: 70px;
+  background-color: #0082ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 7rem;
+  margin-top: 32rem;
+  padding: 2rem;
+  text-align: center;
 }
