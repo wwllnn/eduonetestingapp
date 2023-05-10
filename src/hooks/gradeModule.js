@@ -18,6 +18,8 @@ const gradeModule = (currentAnswers, currentTest) => {
   if(numCorrect >= 12){
     console.log('user will take hard module')
   }
+
+  return numCorrect
 }
 
 export default gradeModule

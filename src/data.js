@@ -393,16 +393,8 @@ export const SAT2023PT3RWM2AQ = {
     answer: 'C'
   },
   38: {
-    passage: `Maximum Height of Maple Trees When Fully Grown
-
-    Tree type	      Maximum height (feet)	   Native to North America
-    Sugar maple	            75	                       yes
-    Silver maple	          70	                       yes
-    Red maple	              60	                       yes
-    Japanese maple	        25	                       no
-    Norway maple	          50	                       no
-
-    For a school project, a forestry student needs to recommend a maple tree that is native to North America and won’t grow more than 60 feet in height. Based on the characteristics of five common maple trees, she has decided to select a ______`,
+    img: 'satpt3rwa38.png',
+    passage: `For a school project, a forestry student needs to recommend a maple tree that is native to North America and won’t grow more than 60 feet in height. Based on the characteristics of five common maple trees, she has decided to select a ______`,
     question: 'Which choice most effectively uses data from the table to complete the text?',
     choice1: 'silver maple.',
     choice2: 'sugar maple.',
@@ -429,16 +421,8 @@ export const SAT2023PT3RWM2AQ = {
     answer: 'B'
   },
   41: {
-    passage: `Characteristics of Five Recently Discovered Gas Exoplanets
-
-    Exoplanet designation	Mass (Jupiters)	Radius (Jupiters)	Orbital period (days)	Distance from the Sun (parsecs)
-    TOI-640 b	                0.88	            1.771	             5.003	                   340
-    TOI-1601 b	              0.99	            1.239	             5.331	                   336
-    TOI-628 b	                6.33	            1.060	             3.409	                   178
-    TOI-1478 b	              0.85	            1.060	            10.180	                   153
-    TOI-1333 b	              2.37	            1.396	             4.720	                   200
-
-    “Hot Jupiters” are gas planets that have a mass of at least 0.25 Jupiters (meaning that their mass is at least 25% of that of Jupiter) and an orbital period of less than 10 days (meaning that they complete one orbit around their star in less than 10 days), while “warm Jupiters” are gas planets that meet the same mass criterion but have orbital periods of more than 10 days. In 2021, Michigan State University astronomer Joseph Rodriguez and colleagues announced the discovery of five new gas exoplanets and asserted that four are hot Jupiters and one is a warm Jupiter.`,
+    img: 'satpt3rwa41.png',
+    passage: `“Hot Jupiters” are gas planets that have a mass of at least 0.25 Jupiters (meaning that their mass is at least 25% of that of Jupiter) and an orbital period of less than 10 days (meaning that they complete one orbit around their star in less than 10 days), while “warm Jupiters” are gas planets that meet the same mass criterion but have orbital periods of more than 10 days. In 2021, Michigan State University astronomer Joseph Rodriguez and colleagues announced the discovery of five new gas exoplanets and asserted that four are hot Jupiters and one is a warm Jupiter.`,
     question: 'Which choice best describes data from the table that support Rodriguez and colleagues’ assertion?',
     choice1: 'None of the planets have an orbital period of more than 10 days, and TOI-628 b has a mass of 6.33 Jupiters.',
     choice2: 'TOI-1478 b has an orbital period of 153 days, and the masses of all the planets range from 0.85 to 6.33 Jupiters.',
@@ -672,6 +656,7 @@ export const SAT2023PT3RWM2BQ = {
     answer: 'A'
   },
   37: {
+    img: 'satpt3rwb37.png',
     passage: 'Studying tools unearthed at a cave site on the western coast of Italy, archaeologist Paola Villa and colleagues have determined that prehistoric Neanderthal groups fashioned them from shells of clams that they harvested from the seafloor while wading or diving or that washed up on the beach. Clamshells become thin and eroded as they wash up on the beach, while those on the seafloor are smooth and sturdy, so the research team suspects that Neanderthals prized the tools made with seafloor shells. However, the team also concluded that those tools were likely more challenging to obtain, noting that ______',
     question: 'Which choice most effectively uses data from the table to support the research team’s conclusion?',
     choice1: 'at each depth below the surface in the cave, the difference in the numbers of tools of each type suggests that shells were easier to collect from the beach than to harvest from the seafloor.',
@@ -699,12 +684,165 @@ export const SAT2023PT3RWM2BQ = {
     answer: 'C'
   },
   40: {
+    img: 'satpt3rwb40.svg',
     passage: 'Perovskite solar cells convert light into electricity more efficiently than earlier kinds of solar cells, and manufacturing advances have recently made them commercially attractive. One limitation of the cells, however, has to do with their electron transport layer (ETL), through which absorbed electrons must pass. Often the ETL is applied through a process called spin coating, but such ETLs are fairly inefficient at converting input power to output power. André Taylor and colleagues tested a novel spray coating method for applying the ETL. The team produced ETLs of various thicknesses and concluded that spray coating holds promise for improving the power conversion efficiency of ETLs in perovskite solar cells.',
     question: 'Which choice best describes data from the graph that support Taylor and colleagues’ conclusion?',
     choice1: 'Both the ETL applied through spin coating and the ETL applied through spray coating showed a power conversion efficiency greater than 10% at their lowest performing thickness.',
     choice2: 'The lowest performing ETL applied through spray coating had a higher power conversion efficiency than the highest performing ETL applied through spin coating.',
     choice3: 'The highest performing ETL applied through spray coating showed a power conversion efficiency of approximately 13%, while the highest performing ETL applied through spin coating showed a power conversion efficiency of approximately 11%.',
     choice4: 'There was a substantial difference in power conversion efficiency between the lowest and highest performing ETLs applied through spray coating.',
+    answer: 'B'
+  },
+  41: {
+    passage: 'King Lear is a circa 1606 play by William Shakespeare. In the play, the character of King Lear attempts to test his three daughters’ devotion to him. He later expresses regret for his actions, as is evident when he ______',
+    question: 'Which choice most effectively uses a quotation from King Lear to illustrate the claim?',
+    choice1: 'says of himself, “I am a man / more sinned against than sinning.”',
+    choice2: 'says during a growing storm, “This tempest will not give me leave to ponder / On things would hurt me more.”',
+    choice3: 'says to himself while striking his head, “Beat at this gate that let thy folly in / And thy dear judgement out!”',
+    choice4: 'says of himself, “I will do such things— / What they are yet, I know not; but they shall be / The terrors of the earth!”',
+    answer: 'C'
+  },
+  42: {
+    img: 'satpt3rwb42.svg',
+    passage: 'Mycorrhizal fungi in soil benefits many plants, substantially increasing the mass of some. A student conducted an experiment to illustrate this effect. The student chose three plant species for the experiment, including two that are mycorrhizal hosts (species known to benefit from mycorrhizal fungi) and one nonmycorrhizal species (a species that doesn’t benefit from and may even be harmed by mycorrhizal fungi). The student then grew several plants from each species both in soil containing mycorrhizal fungi and in soil that had been treated to kill mycorrhizal and other fungi. After several weeks, the student measured the plants’ average mass and was surprised to discover that ______',
+    question: 'Which choice most effectively uses data from the table to complete the statement?',
+    choice1: 'broccoli grown in soil containing mycorrhizal fungi had a slightly higher average mass than broccoli grown in soil that had been treated to kill fungi.',
+    choice2: 'corn grown in soil containing mycorrhizal fungi had a higher average mass than broccoli grown in soil containing mycorrhizal fungi.',
+    choice3: 'marigolds grown in soil containing mycorrhizal fungi had a much higher average mass than marigolds grown in soil that had been treated to kill fungi.',
+    choice4: 'corn had the highest average mass of all three species grown in soil that had been treated to kill fungi, while marigolds had the lowest.',
+    answer: 'A'
+  },
+  43: {
+    passage: 'Choctaw/Cherokee artist Jeffrey Gibson turns punching bags used by boxers into art by decorating them with beadwork and elements of Native dressmaking. These elements include leather fringe and jingles, the metal cones that cover the dresses worn in the jingle dance, a women’s dance of the Ojibwe people. Thus, Gibson combines an object commonly associated with masculinity (a punching bag) with art forms traditionally practiced by women in most Native communities (beadwork and dressmaking). In this way, he rejects the division of male and female gender roles.',
+    question: 'Which choice best describes Gibson’s approach to art, as presented in the text?',
+    choice1: 'He draws from traditional Native art forms to create his original works.',
+    choice2: 'He finds inspiration from boxing in designing the dresses he makes.',
+    choice3: 'He rejects expectations about color and pattern when incorporating beadwork.',
+    choice4: 'He has been influenced by Native and non-Native artists equally.',
+    answer: 'A'
+  },
+  44: {
+    passage: 'A team of biologists led by Jae-Hoon Jung, Antonio D. Barbosa, and Stephanie Hutin investigated the mechanism that allows Arabidopsis thaliana (thale cress) plants to accelerate flowering at high temperatures. They replaced the protein ELF3 in the plants with a similar protein found in another species (stiff brome) that, unlike A. thaliana, displays no acceleration in flowering with increased temperature. A comparison of unmodified A. thaliana plants with the altered plants showed no difference in flowering at 22° Celsius, but at 27° Celsius, the unmodified plants exhibited accelerated flowering while the altered ones did not, which suggests that ______',
+    question: 'Which choice most logically completes the text?',
+    choice1: 'temperature-sensitive accelerated flowering is unique to A. thaliana.',
+    choice2: 'A. thaliana increases ELF3 production as temperatures rise.',
+    choice3: 'ELF3 enables A. thaliana to respond to increased temperatures.',
+    choice4: 'temperatures of at least 22° Celsius are required for A. thaliana to flower.',
+    answer: 'C'
+  },
+  45: {
+    passage: 'The forty-seven geothermal springs of Arkansas’ Hot Springs National Park are sourced via a process known as natural groundwater recharge, in which rainwater percolates downward through the earth—in this case, the porous rocks of the hills around Hot ______blank collect in a subterranean basin.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choice1: 'Springs to',
+    choice2: 'Springs: to',
+    choice3: 'Springs—to',
+    choice4: 'Springs, to',
+    answer: 'C'
+  },
+  46: {
+    passage: 'Journalists have dubbed Gil Scott-Heron the “godfather of rap,” a title that has appeared in hundreds of articles about him since the 1990s. Scott-Heron himself resisted the godfather ______blank feeling that it didn’t encapsulate his devotion to the broader African American blues music tradition as well as “bluesologist,” the moniker he preferred.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choice1: 'nickname, however',
+    choice2: 'nickname, however;',
+    choice3: 'nickname, however,',
+    choice4: 'nickname; however,',
+    answer: 'C'
+  },
+  47: {
+    passage: 'Over twenty years ago, in a landmark experiment in the psychology of choice, professor Sheena Iyengar set up a jam-tasting booth at a grocery store. The number of jams available for tasting ______blank some shoppers had twenty-four different options, others only six. Interestingly, the shoppers with fewer jams to choose from purchased more jam.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choice1: 'varied:',
+    choice2: 'varied,',
+    choice3: 'varied, while',
+    choice4: 'varied while',
+    answer: 'A'
+  },
+  48: {
+    passage: 'Working from an earlier discovery of Charpentier’s, chemists Emmanuelle Charpentier and Jennifer Doudna—winners of the 2020 Nobel Prize in Chemistry—re-created and then reprogrammed the so-called “genetic scissors” of a species of DNA-cleaving bacteria ______blank a tool that is revolutionizing the field of gene technology.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choice1: 'to forge',
+    choice2: 'forging',
+    choice3: 'forged',
+    choice4: 'and forging',
+    answer: 'A'
+  },
+  49: {
+    passage: 'A study published by Rice University geoscientist Ming Tang in 2019 offers a new explanation for the origin of Earth’s ______blank structures called arcs, towering ridges that form when a dense oceanic plate subducts under a less dense continental plate, melts in the mantle below, and then rises and bursts through the continental crust above.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choice1: 'continents geological',
+    choice2: 'continents: geological',
+    choice3: 'continents; geological',
+    choice4: 'continents. Geological',
+    answer: 'B'
+  },
+  50: {
+    passage: 'A firefly uses specialized muscles to draw oxygen into its lower abdomen through narrow tubes, triggering a chemical reaction whereby the oxygen combines with chemicals in the firefly’s abdomen to produce a glow. ______blank when the firefly stops drawing in oxygen, the reaction—and the glow—cease.',
+    question: 'Which choice completes the text with the most logical transition?',
+    choice1: 'For instance,',
+    choice2: 'By contrast,',
+    choice3: 'Specifically,',
+    choice4: 'In conclusion,',
+    answer: 'B'
+  },
+  51: {
+    passage: `While researching a topic, a student has taken the following notes:
+
+    In 1999, astronomer Todd Henry studied the differences in surface temperature between the Sun and nearby stars.
+    His team mapped all stars within 10 parsecs (approximately 200 trillion miles) of the Sun.
+    The surface temperature of the Sun is around 9,800°F, which classifies it as a G star.
+    327 of the 357 stars in the study were classified as K or M stars, with surface temperatures under 8,900°F (cooler than the Sun).
+    11 of the 357 stars in the study were classified as A or F stars, with surface temperatures greater than 10,300°F (hotter than the Sun).`,
+    question: 'The student wants to emphasize how hot the Sun is relative to nearby stars. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
+    choice1: 'At around 9,800°F, which classifies it as a G star, the Sun is hotter than most but not all of the stars within 10 parsecs of it.',
+    choice2: 'Astronomer Todd Henry determined that the Sun, at around 9,800°F, is a G star, and several other stars within a 10-parsec range are A or F stars.',
+    choice3: 'Of the 357 stars within ten parsecs of the Sun, 327 are classified as K or M stars, with surface temperatures under 8,900°F.',
+    choice4: 'While most of the stars within 10 parsecs of the Sun are classified as K, M, A, or F stars, the Sun is classified as a G star due to its surface temperature of 9,800°F.',
+    answer: 'A'
+  },
+  52: {
+    passage: `
+    While researching a topic, a student has taken the following notes:
+    
+    One of history’s greatest libraries was the House of Wisdom in Baghdad, Iraq.
+    It was founded in the eighth century with the goal of preserving all the world’s knowledge.
+    Scholars at the House of Wisdom collected ancient and contemporary texts from Greece, India, and elsewhere and translated them into Arabic.
+    Writings included those of the Greek philosopher Aristotle and the Indian mathematician Aryabhata.
+    The House of Wisdom used Chinese papermaking technology to create paper versions to be studied and shared.`,
+    question: 'The student wants to explain how the House of Wisdom preserved the world’s knowledge. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
+    choice1: 'The House of Wisdom was known for bringing together knowledge from around the world, including from Greece, India, and China.',
+    choice2: 'Founded in Iraq in the eighth century, the House of Wisdom employed many scholars as translators.',
+    choice3: 'Writings from the Greek philosopher Aristotle and the Indian mathematician Aryabhata were preserved at the House of Wisdom.',
+    choice4: 'The House of Wisdom collected writings from different countries and created paper versions in Arabic to be studied and shared.',
+    answer: 'D'
+  },
+  53: {
+    passage: `While researching a topic, a student has taken the following notes:
+
+    Ducklings expend up to 62.8% less energy when swimming in a line behind their mother than when swimming alone.
+    The physics behind this energy savings hasn’t always been well understood.
+    Naval architect Zhiming Yuan used computer simulations to study the effect of the mother duck’s wake.
+    The study revealed that ducklings are pushed in a forward direction by the wake’s waves.
+    Yuan determined this push reduces the effect of wave drag on the ducklings by 158%.`,
+    question: 'The student wants to present the study and its methodology. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
+    choice1: 'A study revealed that ducklings, which expend up to 62.8% less energy when swimming in a line behind their mother, also experience 158% less drag.',
+    choice2: 'Seeking to understand how ducklings swimming in a line behind their mother save energy, Zhiming Yuan used computer simulations to study the effect of the mother duck’s wake.',
+    choice3: 'Zhiming Yuan studied the physics behind the fact that by being pushed in a forward direction by waves, ducklings save energy.',
+    choice4: 'Naval architect Zhiming Yuan discovered that ducklings are pushed in a forward direction by the waves of their mother’s wake, reducing the effect of drag by 158%.',
+    answer: 'B'
+  },
+  54: {
+    passage: `
+    While researching a topic, a student has taken the following notes:
+    
+    The magnificent frigatebird (fregata magnificens) is a species of seabird that feeds mainly on fish, tuna, squid, and other small sea animals.
+    It is unusual among seabirds in that it doesn’t dive into the water for prey.
+    One way it acquires food is by using its hook-tipped bill to snatch prey from the surface of the water.
+    Another way it acquires food is by taking it from weaker birds by force.
+    This behavior is known as kleptoparasitism.`,
+    choice1: 'The student wants to emphasize a similarity between the two ways a magnificent frigatebird acquires food. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
+    choice2: 'Neither of a magnificent frigatebird’s two ways of acquiring food requires the bird to dive into the water.',
+    choice3: 'Of the magnificent frigatebird’s two ways of acquiring food, only one is known as kleptoparasitism.',
+    choice4: 'In addition to snatching prey from the water with its hook-tipped bill, a magnificent frigatebird takes food from other birds by force.',
     answer: 'B'
   }
 }

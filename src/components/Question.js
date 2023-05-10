@@ -5,6 +5,7 @@ import './Question.css'
 
 const Question = ({currentQuestion, currentAnswers, setCurrentAnswers, setSelected, questionNumber, selected}) => {
 
+  console.log(currentQuestion, currentAnswers, questionNumber, selected)
 
   const handleSelect = (letter) => {
     setSelected(letter)
@@ -13,6 +14,12 @@ const Question = ({currentQuestion, currentAnswers, setCurrentAnswers, setSelect
 
   return (
     <div className='question'>
+      {currentQuestion && currentQuestion.img &&
+        <div>
+          <img className='question-image' src={`./` + currentQuestion.img}/>
+        </div>
+      }
+
       <div className='question-passage'>{currentQuestion && currentQuestion.passage}</div>
       <div className='question-question'>{currentQuestion && currentQuestion.question}</div>
 

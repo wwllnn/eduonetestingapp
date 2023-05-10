@@ -7,6 +7,7 @@ const Navbar = () => {
     <div className='navbar'>
       <div className='navbar-inner'>
         <img className='logo' src={logo} />
+        
       </div>
     </div>
   )
