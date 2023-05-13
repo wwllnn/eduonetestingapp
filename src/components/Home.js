@@ -15,7 +15,7 @@ const Home = () => {
     <div className='home'>
       <div className='home-title'>Available Tests</div>
       <div className='home-test' onClick={() => handleTestClick('3')}>SAT Practice Test 3</div>
-      <div className='home-test' onClick={() => handleTestClick('3')}>SAT Practice Test 4</div>
+      <div className='home-test' onClick={() => handleTestClick('4')}>SAT Practice Test 4</div>
       {openModal && <BeginTestModal test={currentTest} setOpenModal={setOpenModal} />}
     </div>
   )

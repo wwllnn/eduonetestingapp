@@ -49,7 +49,9 @@ export const SAT2023PT3RWM1Q = {
     answer: 'A'
   },
   6: {
-    passage: 'The following text is from Walt Whitman’s 1860 poem “Calamus 24.” I HEAR it is charged against me that I seek to destroy institutions; But really I am neither for nor against institutions (What indeed have I in common with them?—Or what with the destruction of them?), Only I will establish in the Mannahatta [Manhattan] and in every city of These States, inland and seaboard, And in the fields and woods, and above every keel [ship] little or large, that dents the water, Without edifices, or rules, or trustees, or any argument, The institution of the dear love of comrades.',
+    passage: `The following text is from Walt Whitman’s 1860 poem “Calamus 24.”  
+
+I HEAR it is charged against me that I seek to destroy institutions; But really I am neither for nor against institutions (What indeed have I in common with them?—Or what with the destruction of them?), Only I will establish in the Mannahatta [Manhattan] and in every city of These States, inland and seaboard, And in the fields and woods, and above every keel [ship] little or large, that dents the water, Without edifices, or rules, or trustees, or any argument, The institution of the dear love of comrades.`,
     question: 'Which choice best describes the overall structure of the text?',
     choice1: 'The speaker questions an increasingly prevalent attitude, then summarizes his worldview.',
     choice2: 'The speaker regrets his isolation from others, then predicts a profound change in society.',
@@ -228,11 +230,11 @@ export const SAT2023PT3RWM1Q = {
   25: {
     passage: `While researching a topic, a student has taken the following notes:
 
-    Physicist Muluneh Abebe was working on a garment suited for both warm and cold conditions.
-    He analyzed the emissivity, or ability to emit heat, of the materials he planned to use.
-    Abebe found that reflective metal fibers emitted almost no heat and had an emissivity of 0.02.
-    He found that silicon carbide fibers absorbed large amounts of heat and had an emissivity of 0.74.
-    The amount of heat a material absorbs is equal to the amount of heat it emits.`,
+    -Physicist Muluneh Abebe was working on a garment suited for both warm and cold conditions.
+    -He analyzed the emissivity, or ability to emit heat, of the materials he planned to use.
+    -Abebe found that reflective metal fibers emitted almost no heat and had an emissivity of 0.02.
+    -He found that silicon carbide fibers absorbed large amounts of heat and had an emissivity of 0.74.
+    -The amount of heat a material absorbs is equal to the amount of heat it emits.`,
     question: 'The student wants to contrast the emissivity of reflective metal fibers with that of silicon carbide fibers. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
     choice1: 'The ability of reflective metal fibers and silicon carbide fibers to emit heat was determined by an analysis of each material’s emissivity.',
     choice2: 'The amount of heat a material absorbs is equal to the amount it emits, as evidenced in Abebe’s analyses.',
@@ -256,14 +258,13 @@ export const SAT2023PT3RWM1Q = {
     answer: 'D'
   },
   27:{
-    passage: `
-    While researching a topic, a student has taken the following notes:
+    passage: `While researching a topic, a student has taken the following notes:
     
-    In 2020, theater students at Radford and Virginia Tech chose an interactive, online format to present a play about woman suffrage activists.
-    Their “Women and the Vote” website featured an interactive digital drawing of a Victorian-style house.
-    Audiences were asked to focus on a room of their choice and select from that room an artifact related to the suffrage movement.
-    One click took them to video clips, songs, artwork, and texts associated with the artifact.
-    The play was popular with audiences because the format allowed them to control the experience.`,
+    -In 2020, theater students at Radford and Virginia Tech chose an interactive, online format to present a play about woman suffrage activists.
+    -Their “Women and the Vote” website featured an interactive digital drawing of a Victorian-style house.
+    -Audiences were asked to focus on a room of their choice and select from that room an artifact related to the suffrage movement.
+    -One click took them to video clips, songs, artwork, and texts associated with the artifact.
+    -The play was popular with audiences because the format allowed them to control the experience.`,
     question: 'The student wants to explain an advantage of the “Women and the Vote” format. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
     choice1: '“Women and the Vote” featured a drawing of a Victorian-style house with several rooms, each containing suffrage artifacts.',
     choice2: 'To access video clips, songs, artwork, and texts, audiences had to first click on an artifact.',
@@ -359,13 +360,11 @@ export const SAT2023PT3RWM2AQ = {
   36: {
     passage: `Text 1
 
-    A tiny, unusual fossil in a piece of 99-million-year-old amber is of the extinct species Oculudentavis khaungraae. The O. khaungraae fossil consists of a rounded skull with a thin snout and a large eye socket. Because these features look like they are avian, or related to birds, researchers initially thought that the fossil might be the smallest avian dinosaur ever found.
+  A tiny, unusual fossil in a piece of 99-million-year-old amber is of the extinct species Oculudentavis khaungraae. The O. khaungraae fossil consists of a rounded skull with a thin snout and a large eye socket. Because these features look like they are avian, or related to birds, researchers initially thought that the fossil might be the smallest avian dinosaur ever found.
     
-     
+Text 2
     
-    Text 2
-    
-    Paleontologists were excited to discover a second small fossil that is similar to the strange O. khaungraae fossil but has part of the lower body along with a birdlike skull. Detailed studies of both fossils revealed several traits that are found in lizards but not in dinosaurs or birds. Therefore, paleontologists think the two creatures were probably unusual lizards, even though the skulls looked avian at first.`,
+  Paleontologists were excited to discover a second small fossil that is similar to the strange O. khaungraae fossil but has part of the lower body along with a birdlike skull. Detailed studies of both fossils revealed several traits that are found in lizards but not in dinosaurs or birds. Therefore, paleontologists think the two creatures were probably unusual lizards, even though the skulls looked avian at first.`,
     question: 'Based on the texts, what would the paleontologists in Text 2 most likely say about the researchers’ initial thought in Text 1?',
     choice1: 'It is understandable because the fossil does look like it could be related to birds, even though O. khaungraae is probably a lizard.',
     choice2: 'It is confusing because it isn’t clear what caused the researchers to think that O. khaungraae might be related to birds.',
@@ -374,8 +373,7 @@ export const SAT2023PT3RWM2AQ = {
     answer: 'A'
   },
   37: {
-    passage: `
-    The following text is from Ezra Pound’s 1909 poem “Hymn III,” based on the work of Marcantonio Flaminio.
+    passage: `The following text is from Ezra Pound’s 1909 poem “Hymn III,” based on the work of Marcantonio Flaminio.
     
     As a fragile and lovely flower unfolds its gleaming
      foliage on the breast of the fostering earth, if
@@ -533,11 +531,11 @@ export const SAT2023PT3RWM2AQ = {
   53: {
     passage: `While researching a topic, a student has taken the following notes:
 
-    Some sandstone arches in Utah’s Arches National Park have been defaced by tourists’ carvings.
-    Park rangers can smooth away some carvings using power grinders.
-    For deep carvings, power grinding is not always feasible because it can greatly alter or damage the rock.
-    Park rangers can use an infilling technique, which involves filling in carvings with ground sandstone and a bonding agent.
-    This technique is minimally invasive.`,
+  Some sandstone arches in Utah’s Arches National Park have been defaced by tourists’ carvings.
+  Park rangers can smooth away some carvings using power grinders.
+  For deep carvings, power grinding is not always feasible because it can greatly alter or damage the rock.
+  Park rangers can use an infilling technique, which involves filling in carvings with ground sandstone and a bonding agent.
+  This technique is minimally invasive.`,
     question: 'The student wants to explain an advantage of the infilling technique. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
     choice1: 'To remove carvings from sandstone arches in Utah’s Arches National Park, power grinding is not always feasible.',
     choice2: 'Filling in carvings with ground sandstone and a bonding agent is less invasive than smoothing them away with a power grinder, which can greatly alter or damage the sandstone arches.',
@@ -548,10 +546,10 @@ export const SAT2023PT3RWM2AQ = {
   54: {
     passage: `While researching a topic, a student has taken the following notes:
     
-    Soo Sunny Park is a Korean American artist who uses light as her primary medium of expression.
-    She created her work Unwoven Light in 2013.
-    Unwoven Light featured a chain-link fence fitted with iridescent plexiglass tiles.
-    When light passed through the fence, colorful prisms formed.`,
+  Soo Sunny Park is a Korean American artist who uses light as her primary medium of expression.
+  She created her work Unwoven Light in 2013.
+  Unwoven Light featured a chain-link fence fitted with iridescent plexiglass tiles.
+  When light passed through the fence, colorful prisms formed.`,
     question: 'The student wants to describe Unwoven Light to an audience unfamiliar with Soo Sunny Park. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
     choice1: 'Park’s 2013 installation Unwoven Light, which included a chain-link fence and iridescent tiles made from plexiglass, featured light as its primary medium of expression.',
     choice2: 'Korean American light artist Soo Sunny Park created Unwoven Light in 2013.',
@@ -610,7 +608,7 @@ export const SAT2023PT3RWM2BQ = {
   33: {
     passage: `The following text is adapted from Jane Austen’s 1814 novel Mansfield Park. The speaker, Tom, is considering staging a play at home with a group of his friends and family.
 
-    We mean nothing but a little amusement among ourselves, just to vary the scene, and exercise our powers in something new. We want no audience, no publicity. We may be trusted, I think, in choosing some play most perfectly unexceptionable; and I can conceive no greater harm or danger to any of us in conversing in the elegant written language of some respectable author than in chattering in words of our own.`,
+  We mean nothing but a little amusement among ourselves, just to vary the scene, and exercise our powers in something new. We want no audience, no publicity. We may be trusted, I think, in choosing some play most perfectly unexceptionable; and I can conceive no greater harm or danger to any of us in conversing in the elegant written language of some respectable author than in chattering in words of our own.`,
     question: 'Which choice best states the main purpose of the text?',
     choice1: 'To offer Tom’s assurance that the play will be inoffensive and involve only a small number of people',
     choice2: 'To clarify that the play will not be performed in the manner Tom had originally intended',
@@ -621,7 +619,7 @@ export const SAT2023PT3RWM2BQ = {
   34: {
     passage: `The following text is adapted from Zora Neale Hurston’s 1921 short story “John Redding Goes to Sea.” John is a child who lives in a town in the woods.
 
-    Perhaps ten-year-old John was puzzling to the folk there in the Florida woods for he was an imaginative child and fond of day-dreams. The St. John River flowed a scarce three hundred feet from his back door. On its banks at this point grow numerous palms, luxuriant magnolias and bay trees. On the bosom of the stream float millions of delicately colored hyacinths. [John Redding] loved to wander down to the water’s edge, and, casting in dry twigs, watch them sail away down stream to Jacksonville, the sea, the wide world and [he] wanted to follow them.`,
+  Perhaps ten-year-old John was puzzling to the folk there in the Florida woods for he was an imaginative child and fond of day-dreams. The St. John River flowed a scarce three hundred feet from his back door. On its banks at this point grow numerous palms, luxuriant magnolias and bay trees. On the bosom of the stream float millions of delicately colored hyacinths. [John Redding] loved to wander down to the water’s edge, and, casting in dry twigs, watch them sail away down stream to Jacksonville, the sea, the wide world and [he] wanted to follow them.`,
     question: 'Which choice best describes the function of the underlined sentence in the text as a whole?',
     choice1: 'It provides an extended description of a location that John likes to visit.',
     choice2: 'It reveals that some residents of John’s town are confused by his behavior.',
@@ -641,13 +639,11 @@ export const SAT2023PT3RWM2BQ = {
   36: {
     passage: `Text 1
 
-    Ecologists have long wondered how thousands of microscopic phytoplankton species can live together near ocean surfaces competing for the same resources. According to conventional wisdom, one species should emerge after outcompeting the rest. So why do so many species remain? Ecologists’ many efforts to explain this phenomenon still haven’t uncovered a satisfactory explanation.
+  Ecologists have long wondered how thousands of microscopic phytoplankton species can live together near ocean surfaces competing for the same resources. According to conventional wisdom, one species should emerge after outcompeting the rest. So why do so many species remain? Ecologists’ many efforts to explain this phenomenon still haven’t uncovered a satisfactory explanation.
+ 
+Text 2
     
-     
-    
-    Text 2
-    
-    Ecologist Michael Behrenfeld and colleagues have connected phytoplankton’s diversity to their microscopic size. Because these organisms are so tiny, they are spaced relatively far apart from each other in ocean water and, moreover, experience that water as a relatively dense substance. This in turn makes it hard for them to move around and interact with one another. Therefore, says Behrenfeld’s team, direct competition among phytoplankton probably happens much less than previously thought.`,
+  Ecologist Michael Behrenfeld and colleagues have connected phytoplankton’s diversity to their microscopic size. Because these organisms are so tiny, they are spaced relatively far apart from each other in ocean water and, moreover, experience that water as a relatively dense substance. This in turn makes it hard for them to move around and interact with one another. Therefore, says Behrenfeld’s team, direct competition among phytoplankton probably happens much less than previously thought.`,
     question: 'Based on the texts, how would Behrenfeld and colleagues (Text 2) most likely respond to the “conventional wisdom” discussed in Text 1?',
     choice1: 'By arguing that it is based on a misconception about phytoplankton species competing with one another',
     choice2: 'By asserting that it fails to recognize that routine replenishment of ocean nutrients prevents competition between phytoplankton species',
@@ -787,11 +783,11 @@ export const SAT2023PT3RWM2BQ = {
   51: {
     passage: `While researching a topic, a student has taken the following notes:
 
-    In 1999, astronomer Todd Henry studied the differences in surface temperature between the Sun and nearby stars.
-    His team mapped all stars within 10 parsecs (approximately 200 trillion miles) of the Sun.
-    The surface temperature of the Sun is around 9,800°F, which classifies it as a G star.
-    327 of the 357 stars in the study were classified as K or M stars, with surface temperatures under 8,900°F (cooler than the Sun).
-    11 of the 357 stars in the study were classified as A or F stars, with surface temperatures greater than 10,300°F (hotter than the Sun).`,
+  -In 1999, astronomer Todd Henry studied the differences in surface temperature between the Sun and nearby stars.
+  -His team mapped all stars within 10 parsecs (approximately 200 trillion miles) of the Sun.
+  -The surface temperature of the Sun is around 9,800°F, which classifies it as a G star.
+  -327 of the 357 stars in the study were classified as K or M stars, with surface temperatures under 8,900°F (cooler than the Sun).
+  -11 of the 357 stars in the study were classified as A or F stars, with surface temperatures greater than 10,300°F (hotter than the Sun).`,
     question: 'The student wants to emphasize how hot the Sun is relative to nearby stars. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
     choice1: 'At around 9,800°F, which classifies it as a G star, the Sun is hotter than most but not all of the stars within 10 parsecs of it.',
     choice2: 'Astronomer Todd Henry determined that the Sun, at around 9,800°F, is a G star, and several other stars within a 10-parsec range are A or F stars.',
@@ -803,11 +799,11 @@ export const SAT2023PT3RWM2BQ = {
     passage: `
     While researching a topic, a student has taken the following notes:
     
-    One of history’s greatest libraries was the House of Wisdom in Baghdad, Iraq.
-    It was founded in the eighth century with the goal of preserving all the world’s knowledge.
-    Scholars at the House of Wisdom collected ancient and contemporary texts from Greece, India, and elsewhere and translated them into Arabic.
-    Writings included those of the Greek philosopher Aristotle and the Indian mathematician Aryabhata.
-    The House of Wisdom used Chinese papermaking technology to create paper versions to be studied and shared.`,
+  -One of history’s greatest libraries was the House of Wisdom in Baghdad, Iraq.
+  -It was founded in the eighth century with the goal of preserving all the world’s knowledge.
+  -Scholars at the House of Wisdom collected ancient and contemporary texts from Greece, India, and elsewhere and translated them into Arabic.
+  -Writings included those of the Greek philosopher Aristotle and the Indian mathematician Aryabhata.
+  -The House of Wisdom used Chinese papermaking technology to create paper versions to be studied and shared.`,
     question: 'The student wants to explain how the House of Wisdom preserved the world’s knowledge. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
     choice1: 'The House of Wisdom was known for bringing together knowledge from around the world, including from Greece, India, and China.',
     choice2: 'Founded in Iraq in the eighth century, the House of Wisdom employed many scholars as translators.',
@@ -818,11 +814,11 @@ export const SAT2023PT3RWM2BQ = {
   53: {
     passage: `While researching a topic, a student has taken the following notes:
 
-    Ducklings expend up to 62.8% less energy when swimming in a line behind their mother than when swimming alone.
-    The physics behind this energy savings hasn’t always been well understood.
-    Naval architect Zhiming Yuan used computer simulations to study the effect of the mother duck’s wake.
-    The study revealed that ducklings are pushed in a forward direction by the wake’s waves.
-    Yuan determined this push reduces the effect of wave drag on the ducklings by 158%.`,
+  -Ducklings expend up to 62.8% less energy when swimming in a line behind their mother than when swimming alone.
+  -The physics behind this energy savings hasn’t always been well understood.
+  -Naval architect Zhiming Yuan used computer simulations to study the effect of the mother duck’s wake.
+  -The study revealed that ducklings are pushed in a forward direction by the wake’s waves.
+  -Yuan determined this push reduces the effect of wave drag on the ducklings by 158%.`,
     question: 'The student wants to present the study and its methodology. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
     choice1: 'A study revealed that ducklings, which expend up to 62.8% less energy when swimming in a line behind their mother, also experience 158% less drag.',
     choice2: 'Seeking to understand how ducklings swimming in a line behind their mother save energy, Zhiming Yuan used computer simulations to study the effect of the mother duck’s wake.',
@@ -834,17 +830,81 @@ export const SAT2023PT3RWM2BQ = {
     passage: `
     While researching a topic, a student has taken the following notes:
     
-    The magnificent frigatebird (fregata magnificens) is a species of seabird that feeds mainly on fish, tuna, squid, and other small sea animals.
-    It is unusual among seabirds in that it doesn’t dive into the water for prey.
-    One way it acquires food is by using its hook-tipped bill to snatch prey from the surface of the water.
-    Another way it acquires food is by taking it from weaker birds by force.
-    This behavior is known as kleptoparasitism.`,
+  -The magnificent frigatebird (fregata magnificens) is a species of seabird that feeds mainly on fish, tuna, squid, and other small sea animals.
+  -It is unusual among seabirds in that it doesn’t dive into the water for prey.
+  -One way it acquires food is by using its hook-tipped bill to snatch prey from the surface of the water.
+  -Another way it acquires food is by taking it from weaker birds by force.
+  -This behavior is known as kleptoparasitism.`,
     choice1: 'The student wants to emphasize a similarity between the two ways a magnificent frigatebird acquires food. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
     choice2: 'Neither of a magnificent frigatebird’s two ways of acquiring food requires the bird to dive into the water.',
     choice3: 'Of the magnificent frigatebird’s two ways of acquiring food, only one is known as kleptoparasitism.',
     choice4: 'In addition to snatching prey from the water with its hook-tipped bill, a magnificent frigatebird takes food from other birds by force.',
     answer: 'B'
   }
+}
+
+export const SAT2023PT3MM1Q = {
+  55: {
+    img:'satpt3m1.png',
+    passage:'',
+    question: '',
+    choice1: '30',
+    choice2: '32',
+    choice3: '60',
+    choice4: '90',
+    answer: 'C'
+  },
+  56: {
+    img: 'satpt3m2.png',
+    passage: '',
+    question: '',
+    choice1img: 'satpt3m2-1.svg',
+    choice2img: 'satpt3m2-2.svg',
+    choice3img: 'satpt3m2-3.svg',
+    choice4img: 'satpt3m2-4.svg',
+    answer: 'D'
+  },
+  57: {
+    img: 'satpt3m3.png',
+    fr: true,
+    answer: '.2'
+  },
+  58: {
+    img: 'satpt3m4.png',
+    choice1img: 'satpt3m4-1.svg',
+    choice2img: 'satpt3m4-2.svg',
+    choice3img: 'satpt3m4-3.svg',
+    choice4img: 'satpt3m4-4.svg',
+    answer: 'B'
+  },
+  59: {
+    img: 'satpt3m5.png',
+    choice1img: 'satpt3m5-1.svg',
+    choice2img: 'satpt3m5-2.svg',
+    choice3img: 'satpt3m5-3.svg',
+    choice4img: 'satpt3m5-4.svg',
+    answer: 'B'
+  },
+  60: {
+    img: 'satpt3m6.png',
+    choice1: 'The mean mass of group 1 is greater than the mean mass of group 2.',
+    choice2: 'The mean mass of group 1 is less than the mean mass of group 2.',
+    choice3: 'The median mass of group 1 is greater than the median mass of group 2.',
+    choice4: 'The median mass of group 1 is less than the median mass of group 2.',
+    answer: 'C'
+  },
+  61: {
+    
+  }
+
+
+}
+
+export const SAT2023PT3MM2AQ = {
+}
+
+export const SAT2023PT3MM2BQ = {
+  
 }
 
 export const SAT2023PT4RWM1Q = {

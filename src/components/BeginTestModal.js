@@ -14,7 +14,7 @@ const BeginTestModal = ({test, setOpenModal}) => {
           <div className='begintestmodal-message1b'>SAT Assessment {test}</div>
         </div>
         <div className='begintestmodal-message2'>Click the Start button below and the assessment will begin</div>
-        <Link to={testlink}>
+        <Link className='link' to={testlink}>
           <div className='begintestmodal-start'>Start</div>
         </Link>
       </div>

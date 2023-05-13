@@ -19,11 +19,22 @@
   margin-right: 7rem;
 }
 
-.active-nav-button{
+.answered-nav-button{
   width: 30px;
   height: 30px;
   color: white;
   background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+}
+
+.active-nav-button{
+  width: 30px;
+  height: 30px;
+  color: white;
+  background-color: #0082ef;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,8 +54,8 @@
 }
 
 .test-next{
-  width: 140px;
-  height: 70px;
+  width: 170px;
+  height: 85px;
   background-color: #0082ef;
   display: flex;
   align-items: center;
@@ -57,6 +68,7 @@
   margin-top: 32rem;
   padding: 2rem;
   text-align: center;
+  user-select: none;
 }
 
 .next-modal{
@@ -69,6 +81,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 99;
 }
 
 .next-modalcontent{

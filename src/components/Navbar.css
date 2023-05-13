@@ -9,6 +9,10 @@
 
 .navbar-inner{
   margin: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
 }
 
 .logo{
