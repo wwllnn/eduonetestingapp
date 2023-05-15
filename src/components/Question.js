@@ -5,8 +5,6 @@ import './Question.css'
 
 const Question = ({currentQuestion, currentAnswers, setCurrentAnswers, setSelected, questionNumber, selected}) => {
 
-  console.log(currentQuestion, currentAnswers, questionNumber, selected)
-
   const [currentInput, setCurrentInput] = useState('')
 
   const handleSelect = (letter) => {
@@ -18,7 +16,6 @@ const Question = ({currentQuestion, currentAnswers, setCurrentAnswers, setSelect
     setCurrentAnswers({...currentAnswers, [questionNumber]:i})
   }
 
-  console.log(currentInput)
   console.log(currentAnswers)
 
   return (
@@ -33,7 +30,7 @@ const Question = ({currentQuestion, currentAnswers, setCurrentAnswers, setSelect
       <p className='question-passage'>{currentQuestion && currentQuestion.passage}</p>
       <div className='question-question'>{currentQuestion && currentQuestion.question}</div>
 
-      {!currentQuestion.fr && 
+      {currentQuestion && !currentQuestion.fr && 
             <div>
             <div className={selected == 'A' ? 'question-choicelineselected' : 'question-choiceline'} onClick={() => handleSelect('A')}>
               <div className={selected == 'A' ? 'question-choiceletterselected' : 'question-choiceletter'}>A</div>
@@ -59,7 +56,7 @@ const Question = ({currentQuestion, currentAnswers, setCurrentAnswers, setSelect
               {currentQuestion && <img className='question-choice' src={currentQuestion.choice4img} />}
             </div>
           </div>}
-      {currentQuestion.fr && 
+      {currentQuestion && currentQuestion.fr && 
         <input onChange={(e) => handleInput(e.target.value)}></input>
       }
 

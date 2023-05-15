@@ -846,8 +846,6 @@ Text 2
 export const SAT2023PT3MM1Q = {
   55: {
     img:'satpt3m1.png',
-    passage:'',
-    question: '',
     choice1: '30',
     choice2: '32',
     choice3: '60',
@@ -856,8 +854,6 @@ export const SAT2023PT3MM1Q = {
   },
   56: {
     img: 'satpt3m2.png',
-    passage: '',
-    question: '',
     choice1img: 'satpt3m2-1.svg',
     choice2img: 'satpt3m2-2.svg',
     choice3img: 'satpt3m2-3.svg',
@@ -867,7 +863,7 @@ export const SAT2023PT3MM1Q = {
   57: {
     img: 'satpt3m3.png',
     fr: true,
-    answer: '.2'
+    answer: .2
   },
   58: {
     img: 'satpt3m4.png',
@@ -894,17 +890,473 @@ export const SAT2023PT3MM1Q = {
     answer: 'C'
   },
   61: {
-    
-  }
-
-
+    img: 'satpt3m7.png',
+    choice1img: 'satpt3m7-1.svg',
+    choice2img: 'satpt3m7-2.svg',
+    choice3img: 'satpt3m7-3.svg',
+    choice4img: 'satpt3m7-4.svg',
+    answer: 'B'
+  },
+  62: {
+    img: 'satpt3m8.png',
+    choice1: 'It is plausible that the proportion is between 0.45 and 0.53.',
+    choice2: 'It is plausible that the proportion is less than 0.45.',
+    choice3: 'The proportion is exactly 0.49.',
+    choice4: 'It is plausible that the proportion is greater than 0.53.',
+    answer: 'A'
+  },
+  63: {
+    img: 'satpt3m9.png',
+    choice1: 'Zero',
+    choice2: 'Exactly one',
+    choice3: 'Exactly two',
+    choice4: 'Infinitely many',
+    answer: 'A'
+  },
+  64: {
+    img: 'satpt3m10.png',
+    choice1img: 'satpt3m64-1.svg',
+    choice2img: 'satpt3m64-2.svg',
+    choice3img: 'satpt3m64-3.svg',
+    choice4img: 'satpt3m64-4.svg',
+    answer: 'C'
+  },
+  65: {
+    img: 'satpt3m11.png',
+    fr: true,
+    answer: 24
+  },
+  66: {
+    img: 'satpt3m12.png',
+    choice1: '300',
+    choice2: '296',
+    choice3: '75',
+    choice4: '4',
+    answer: 'D'
+  },
+  67: {
+    img: 'satpt3m13.png',
+    choice1: 'Decreasing exponential',
+    choice2: 'Decreasing linear',
+    choice3: 'Increasing exponential',
+    choice4: 'Increasing linear',
+    answer: 'C'
+  },
+  68: {
+    img: 'satpt3m14.png',
+    fr: true,
+    answer: 80
+  },
+  69: {
+    img: 'satpt3m15.png',
+    fr: true,
+    answer: 7
+  },
+  70: {
+    img: 'satpt3m16.png',
+    choice1: '21',
+    choice2: '28',
+    choice3: '32',
+    choice4: '35',
+    answer: 'A'
+  },
+  71: {
+    img: 'satpt3m17.png',
+    fr: true,
+    answer: 27556
+  },
+  72: {
+    img: 'satpt3m18.png',
+    choice1: '6.2',
+    choice2: '7.3',
+    choice3: '8.2',
+    choice4: '9.1',
+    answer: 'C'
+  },
+  73: {
+    img: 'satpt3m19.png',
+    choice1: '75',
+    choice2: '120',
+    choice3: '195',
+    choice4: '390',
+    answer: 'C'
+  },
+  74: {
+    img: 'satpt3m20.png',
+    choice1: '1/12,000',
+    choice2: '1/4',
+    choice3: '4',
+    choice4: '12,000',
+    answer: 'B'
+  },
+  75: {
+    img: 'satpt3m21.png',
+    fr: true,
+    answer: -3
+  },
+  76: {
+    img: 'satpt3m22.png',
+    choice1: 'I and II only',
+    choice2: 'I and III only',
+    choice3: 'II and III only',
+    choice4: 'I, II, III',
+    answer: 'C'
+  },
 }
 
 export const SAT2023PT3MM2AQ = {
+  //1
+  77: {
+    question: 'What is 10% of 470?',
+    choice1: '37',
+    choice2: '47',
+    choice3: '423',
+    choice4: '460',
+    answer: 'B'
+  },
+  //2
+  78: {
+    img: 'satpt3ma2.png',
+    choice1: '25',
+    choice2: '39',
+    choice3: '48',
+    choice4: '50',
+    answer: 'B'
+  },
+  //3
+  79: {
+    img: 'satpt3ma3.png',
+    fr: true,
+    answer: 40
+  },
+  //4
+  80: {
+    question: 'A customer spent $27 to purchase oranges at $3 per pound. How many pounds of oranges did the person purchase?',
+    fr: true,
+    answer: 9
+  },
+  //5
+  81: {
+    img: 'satpt3ma5.png',
+    fr: true,
+    answer: 2
+  },
+  //6
+  82: {
+    img: 'satpt3ma6.png',
+    choice1: '4',
+    choice2: '5',
+    choice3: '9',
+    choice4: '13',
+    answer: 'A'
+  },
+  //7
+  83: {
+    img: 'satpt3ma7.png',
+    choice1: '(-8, 0)',
+    choice2: '(-6, 0)',
+    choice3: '(0, 6)',
+    choice4: '(0, 8)',
+    answer: 'D'
+  },
+  //8
+  84: {
+    question: 'Sean rents a tent at a cost of $11 per day plus a onetime insurance fee of $10. Which equation represents the total cost c, in dollars, to rent the tent with insurance for d days?',
+    choice1: 'c = 11(d + 10)',
+    choice2: 'c = 10(d + 11)',
+    choice3: 'c = 11d + 10',
+    choice4: 'c = 10d + 11',
+    answer: 'C'
+  },
+  //9
+  85: {
+    img: 'satpt3ma9.png',
+    choice1img: 'satpt3ma9-1.svg',
+    choice2img: 'satpt3ma9-2.svg',
+    choice3img: 'satpt3ma9-3.svg',
+    choice4img: 'satpt3ma9-4.svg',
+    answer: 'D'
+  },
+  //10
+  86: {
+    img: 'satpt3ma10.png',
+    choice1img: 'satpt3ma10-1.png',
+    choice2img: 'satpt3ma10-2.png',
+    choice3img: 'satpt3ma10-3.png',
+    choice4img: 'satpt3ma10-4.png',
+    answer: 'D'
+  },
+  //11
+  87: {
+    img: 'satpt3ma11.png',
+    fr: true,
+    answer: 70
+  },
+  //12
+  88: {
+    question: 'What is the perimeter, in inches, of a rectangle with a length of 4 inches and a width of 9 inches?',
+    choice1: '13',
+    choice2: '17',
+    choice3: '22',
+    choice4: '26',
+    answer: 'D'
+  },
+  //13
+  89: {
+    img: 'satpt3ma13.png',
+    choice1img: 'satpt3ma13-1.svg',
+    choice2img: 'satpt3ma13-2.svg',
+    choice3img: 'satpt3ma13-3.svg',
+    choice4img: 'satpt3ma13-4.svg',
+    answer: 'D'
+  },
+  //14
+  90: {
+    question: 'The point (8,2) in the xy-plane is a solution to which of the following systems of inequalities?',
+    choice1: `x > 0, y > 0`,
+    choice2: `x > 0, y < 0`,
+    choice3: `x < 0, y > 0`,
+    choice4: `x < 0, y < 0`,
+    answer: 'A'
+  },
+  //15
+  91: {
+    img: 'satpt3ma15.png',
+    choice1: 'y = -1.9x - 10.1',
+    choice2: 'y = -1.9x + 10.1',
+    choice3: 'y = 1.9x - 10.1',
+    choice4: 'y = 1.9x + 10.1',
+    answer: 'B'
+  },
+  //16
+  92: {
+    question: 'A company opens an account with an initial balance of $36,100.00. The account earns interest, and no additional desposits or withdrawls are made. The account balance is given by an exponential function A, where A(t) is the account balace, in dollars, t years after the account is opened. The account balance after 13 years is $68,071.93. Which equation could define A?',
+    choice1img: 'satpt3ma16-1.svg',
+    choice2img: 'satpt3ma16-2.svg',
+    choice3img: 'satpt3ma16-3.svg',
+    choice4img: 'satpt3ma16-4.svg',
+    answer: 'A'
+  },
+  //17
+   93: {
+    passage: '2|4-x| + 3|4-x| = 25',
+    question: 'What is the positive solution to the given equation?',
+    fr: true,
+    answer: 9
+   },
+   //18
+   94: {
+    img: 'satpt3ma18.png',
+    fr: true,
+    answer: 6
+   }, 
+   //19
+   95: {
+    question: 'The area A, in square centimeters, of a rectangular cutting board can be represented by the expression w(w+9), where w is the width, in centimeters, of the cutting board. Which expression represents the length, in centimeters, of the cutting board?',
+    choice1: 'w(w+9)',
+    choice2: 'w',
+    choice3: '9',
+    choice4: '(w+9)',
+    answer: 'D'
+   },
+   //20
+   96: {
+    img: 'satpt3ma20.png',
+    choice1img: 'satpt3ma20-1.png',
+    choice2img: 'satpt3ma20-2.png',
+    choice3img: 'satpt3ma20-3.png',
+    choice4img: 'satpt3ma20-4.png',
+    answer: 'D'
+   },
+   97: {
+    img: 'satpt3ma21.png',
+    choice1: '-15',
+    choice2: '-9',
+    choice3: '11',
+    choice4: '15',
+    answer: 'B'
+   },
+   98: {
+    img: 'satpt3ma22.png',
+    choice1img: 'satpt3ma22-1.svg',
+    choice2img: 'satpt3ma22-1.svg',
+    choice3img: 'satpt3ma22-1.svg',
+    choice4img: 'satpt3ma22-1.svg',
+    answer: 'A'
+   }
 }
 
 export const SAT2023PT3MM2BQ = {
-  
+  //1
+  77: {
+    img: 'satpt3mb1.png',
+    choice1img: 'satpt3mb1-1.png',
+    choice2img: 'satpt3mb1-2.png',
+    choice3img: 'satpt3mb1-3.png',
+    choice4img: 'satpt3mb1-4.png',
+    answer: 'A'
+  },
+  //2
+  78: {
+    img: 'satpt3mb2.png',
+    choice1: '33',
+    choice2: '57',
+    choice3: '123',
+    choice4: '147',
+    answer: 'D'
+  },
+  //3
+  79: {
+    question: 'What percentage of 300 is 75?',
+    choice1: '25%',
+    choice2: '50%',
+    choice3: '75%',
+    choice4: '225%',
+    answer: 'A'
+  },
+  //4
+  80: {
+    question: 'The function g is defined by g(x) = 6x. For what value of x is g(x) = 54?',
+    fr: true,
+    answer: 9
+  },
+  //5
+  81: {
+    img: 'satpt3mb5.png',
+    choice1: '0',
+    choice2: '1',
+    choice3: '27',
+    choice4: '270',
+    answer: 'D'
+  },
+  //6
+  82: {
+    img: 'satpt3mb6.png',
+    choice1img: 'satpt3mb6-1.svg',
+    choice1img: 'satpt3mb6-2.svg',
+    choice1img: 'satpt3mb6-3.svg',
+    choice1img: 'satpt3mb6-4.svg',
+    answer: 'B'
+  },
+  //7
+  83: {
+    img: 'satpt3mb7.png',
+    choice1: '(0,14)',
+    choice2: '(0,2)',
+    choice3: '(0,22)',
+    choice4: '(0,-8)',
+    answer: 'A'
+  },
+  //8
+  84: {
+    img: 'satpt3mb8.png',
+    choice1img: 'satpt3mb8-1.svg', 
+    choice2img: 'satpt3mb8-2.svg', 
+    choice3img: 'satpt3mb8-3.svg', 
+    choice4img: 'satpt3mb8-4.svg', 
+    answer: 'D'
+  },
+  //9
+  85: {
+    question: 'The function f is defined by f(x) = (x-6)(x-2)(x+6). In the xy-plane, the graph of y=g(x) is the result of translating the graph of y=f(x) up 4 units. What is the value of g(0)?',
+    fr: true,
+    answer: 76,
+  },
+  //10
+  86: {
+    question: 'A cube has a volume of 474,552 cubic units. What is the surface area, in square units, of the cube?',
+    fr: true,
+    answer: 36504
+  },
+  //11
+  87: {
+    question: 'For the function q, the value of q(x) decreases by 45% for every increase in the value of x by 1. If q(0) = 14, which equation defines q?',
+    choice1img: 'satpt3mb11-1.svg',
+    choice2img: 'satpt3mb11-2.svg',
+    choice3img: 'satpt3mb11-3.svg',
+    choice4img: 'satpt3mb11-4.svg',
+    answer: 'C'
+  },
+  //12
+  88: {
+    img: 'satpt3mb12.png',
+    choice1img: 'satpt3mb12-1.png',
+    choice2img: 'satpt3mb12-2.png',
+    choice3img: 'satpt3mb12-3.png',
+    choice4img: 'satpt3mb12-4.png',
+    answer: 'C'
+  },
+  89: {
+    img: 'satpt3mb13.png',
+    choice1: 'I only',
+    choice2: 'II only',
+    choice3: 'I and II',
+    choice4: 'Neither I nor II',
+    answer: 'B'
+  },
+  90:{
+    img: 'satpt3mb14.png',
+    choice1: '-9',
+    choice2: '0',
+    choice3: '9',
+    choice4: '18',
+    answer: 'D'
+  },
+  91: {
+    img: 'satpt3mb15.png',
+    fr: true,
+    answer: 9
+  },
+  92: {
+    question: 'A small business owner budgets $2,200 to purchase candles. The owner must purchase a minimum of 200 candles to maintain the discounted pricing. If the owner pays $4.90 per candle to purchase small candles and $11.60 per candle to purchase large candles, what is the maximum number of large candles the owner can purchase to stay within the budget and maintain the discounted pricing?',
+    fr: true,
+    answer: 182
+  },
+  93: {
+    img: 'satpt3mb17.png',
+    choice1: '4',
+    choice2: '5',
+    choice3: '36',
+    choice4: '64',
+    answer: 'C'
+  },
+  94: {
+    img: 'satpt3mb18.png',
+    choice1: 'satpt3mb18-1.svg',
+    choice2: 'satpt3mb18-2.svg',
+    choice3: 'satpt3mb18-3.svg',
+    choice4: 'satpt3mb18-4.svg',
+    answer: 'B'
+  },
+  95: {
+    img: 'satpt3mb19.png',
+    choice1: '8',
+    choice2: '10',
+    choice3: '20',
+    choice4: '40',
+    answer: 'A'
+  },
+  96: {
+    img: 'satpt3mb20.png',
+    fr: true,
+    answer: 50
+  },
+  97: {
+    img: 'satpt3mb21.png',
+    choice1: 'f(x) = 60x + 100',
+    choice2: 'f(x) = 60x + 220',
+    choice3: 'f(x) = 80x',
+    choice4: 'f(x) = 80x + 200',
+    answer: 'B'
+  },
+  98: {
+    img: 'satpt3mb22.png',
+    choice1: '0',
+    choice2: '1',
+    choice3: '10',
+    choice4: '23',
+    answer: 'B'
+  }
 }
 
 export const SAT2023PT4RWM1Q = {

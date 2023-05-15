@@ -3,9 +3,9 @@ import { SAT2023PT3RWM1Q, SAT2023PT4RWM1Q } from "../data"
 const gradeModule = (currentAnswers, currentTest) => {
 
   let numCorrect = 0
-  Object.entries(currentAnswers).map(([key, value]) => {
+  Object.entries(currentTest).map(([key, value]) => {
     console.log(key, value)
-    if(currentTest[key].answer == value){
+    if(currentAnswers[key] == currentTest[key].answer){
       numCorrect++
     }
 

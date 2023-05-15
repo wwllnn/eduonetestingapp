@@ -1,6 +1,13 @@
 import React, { useEffect } from 'react'
-import { SAT2023PT3MM1Q, SAT2023PT3RWM1Q, SAT2023PT3RWM2AQ, SAT2023PT3RWM2BQ,
-         SAT2023PT4RWM1Q
+import { 
+  SAT2023PT3RWM1Q, 
+  SAT2023PT3RWM2AQ, 
+  SAT2023PT3RWM2BQ,
+  SAT2023PT3MM1Q, 
+  SAT2023PT3MM2AQ,
+  SAT2023PT3MM2BQ,
+  SAT2023PT4RWM1Q,
+
        } from '../data.js'
 import { Link } from 'react-router-dom'
 import Question from './Question.js'
@@ -77,7 +84,7 @@ const Test = ({testnumber}) => {
   }
 
   //setmodal true to 2nd math module
-  const nextMathModal = () => {
+  const nextMathModule = () => {
     setMathModal2(true)
   }
 
@@ -113,10 +120,29 @@ const Test = ({testnumber}) => {
     setMathModal(false)
   }
 
-  console.log(moduleNumber)
+  const handleSaveandChangeMath = () => {
+    //grades current module
+    //grades current module
+    const numCorrect = gradeModule(currentAnswers, currentTest)
+    if(numCorrect >= 15){
+      setCurrentTest(SAT2023PT3MM2BQ)
+      setCurrentQuestion(SAT2023PT3MM2BQ[77])
+      setQuestionNumber(77)
+    } else if (numCorrect < 15){
+      setCurrentTest(SAT2023PT3MM2AQ)
+      setCurrentQuestion(SAT2023PT3MM2AQ[77])
+      setQuestionNumber(77)
+    }
+    setSelected('')
+    setModuleNumber(prev => prev + 1)
+    setMathModal2(false)
+  }
+
+  const FinishTest = () => {
+    console.log('finished')
+  }
+
   console.log(questionNumber)
-  console.log(currentTest)
-  console.log(currentQuestion)
   console.log(currentAnswers)
 
   return (
@@ -135,11 +161,23 @@ const Test = ({testnumber}) => {
 
       {mathModal && <div className='next-modal'> 
         <div className='next-modalcontent'>
-          <div className='next-modalexit' onClick={() => setNextModal(false)}>x</div>
+          <div className='next-modalexit' onClick={() => setMathModal(false)}>x</div>
           <div className='next-modaltext'>
             Click the button below to save and begin the next module
           </div>
           <div className='next-modalbutton' onClick={() => handleSaveandChangeRW2()}>
+            Begin Math Module
+          </div>
+        </div>
+      </div>}
+
+      {mathModal2 && <div className='next-modal'> 
+        <div className='next-modalcontent'>
+          <div className='next-modalexit' onClick={() => setMathModal2(false)}>x</div>
+          <div className='next-modaltext'>
+            Click the button below to save and begin the next math module
+          </div>
+          <div className='next-modalbutton' onClick={() => handleSaveandChangeMath()}>
             Begin Math Module
           </div>
         </div>
@@ -153,10 +191,7 @@ const Test = ({testnumber}) => {
         <div className='test-nav'>
           {
             currentTest && Object.keys(currentTest).map(i => {
-              console.log(i)
-              console.log(questionNumber)
               if(i == questionNumber){
-                console.log('same number')
               }
               return <div key={i} onClick={() => changeQuestion(i)} className={currentAnswers.hasOwnProperty(i) ? 'answered-nav-button' : questionNumber == i ? 'active-nav-button' : 'nav-button'}>{i}</div>
             })
@@ -174,7 +209,7 @@ const Test = ({testnumber}) => {
         />
       </div>
       <div className='test-right'>
-        {((questionNumber != 27) && (questionNumber != 54) && (questionNumber != 76)) && <div className='test-next' onClick={() => nextQuestion(questionNumber)}>Next</div>}
+        {((questionNumber != 27) && (questionNumber != 54) && (questionNumber != 76) && (questionNumber != 98)) && <div className='test-next' onClick={() => nextQuestion(questionNumber)}>Next</div>}
 
         {(questionNumber == 27) &&
           <div className='test-next' onClick={() => nextModule()}>Next Module</div>
@@ -182,6 +217,14 @@ const Test = ({testnumber}) => {
 
         {(questionNumber == 54) &&
           <div className='test-next' onClick={() => toMathModule()}>Start Math Module</div>
+        }
+        {
+          (questionNumber == 76) &&
+          <div className='test-next' onClick={() => nextMathModule()}>Next Math Module</div>
+        }
+        {
+          (questionNumber == 98) &&
+          <div className='test-next' onClick={() => FinishTest()}>Finish Test</div>
         }
       </div>
     </div>
