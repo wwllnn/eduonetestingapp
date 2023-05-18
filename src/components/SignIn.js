@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useSignIn } from '../hooks/useSignIn'
+import './SignIn.css'
 
 
 const SignIn = () => {
@@ -12,7 +13,11 @@ const SignIn = () => {
   }
 
   return (
-    <div onClick={handleSignIn}>SignIn</div>
+    <div className='signin' >
+      <div className='signin-button' onClick={handleSignIn}>
+        Sign In
+      </div>
+    </div>
   )
 }
 

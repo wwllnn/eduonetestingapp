@@ -14,8 +14,13 @@ import Question from './Question.js'
 import { useState } from 'react'
 import './Test.css'
 import gradeModule from '../hooks/gradeModule.js'
+import { useFirestore } from '../hooks/useFirestore.js'
+import { useAuthContext } from '../hooks/useAuthContext.js'
+import { useNavigate } from 'react-router-dom'
 
 const Test = ({testnumber}) => {
+
+  const navigate = useNavigate()
 
   const [currentTest, setCurrentTest] = useState()
   const [currentAnswers, setCurrentAnswers] = useState({})
@@ -28,6 +33,15 @@ const Test = ({testnumber}) => {
   const [moduleNumber, setModuleNumber] = useState(1)
 
   console.log(currentAnswers)
+
+  const { addDocument, state } = useFirestore('tests')
+
+  const { user } = useAuthContext()   
+
+  if(user && user.email) {
+    console.log(user)
+  }
+
 
 
   //gets which number user clicked on and sets state to that test and the 1st question
@@ -139,7 +153,32 @@ const Test = ({testnumber}) => {
   }
 
   const FinishTest = () => {
-    console.log('finished')
+    console.log(user)
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    if(user){
+      //create current date data
+      let currentDate = new Date()
+      let formattedDate = currentDate.toDateString()
+
+      //create project object to send
+      const project = {
+        currentAnswers,
+        date: formattedDate,
+        userEmail: user.email,
+        userDisplayName: user.displayName
+      }
+      
+      
+      await addDocument(project)
+      if(state.error == null){
+        console.log('hello')
+        navigate('/')
+      }
+    }
   }
 
   console.log(questionNumber)
@@ -224,7 +263,7 @@ const Test = ({testnumber}) => {
         }
         {
           (questionNumber == 98) &&
-          <div className='test-next' onClick={() => FinishTest()}>Finish Test</div>
+          <div className='test-next' onClick={handleSubmit}>Finish Test</div>
         }
       </div>
     </div>

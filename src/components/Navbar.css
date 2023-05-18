@@ -11,11 +11,27 @@
   margin: 30px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   color: white;
+  height: 3rem;
 }
 
 .logo{
   margin-top: 5px;
   height: 20px;
+}
+
+.navbar-innerright{
+  display: flex;
+  align-items: center;
+
+}
+
+.navbar-signout{
+  margin-left: 1rem;
+  background-color: firebrick;
+  cursor: pointer;
+  padding: .5rem;
+  border-radius: 12px;
 }
