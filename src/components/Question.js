@@ -3,7 +3,25 @@ import './Question.css'
 
 
 
-const Question = ({currentQuestion, currentAnswers, setCurrentAnswers, setSelected, questionNumber, selected}) => {
+const Question = ({
+  currentQuestion, 
+  currentAnswers, 
+  currentAnswers1, 
+  currentAnswers2, 
+  currentAnswers3, 
+  currentAnswers4, 
+
+  setCurrentAnswers, 
+  setCurrentAnswers1, 
+  setCurrentAnswers2, 
+  setCurrentAnswers3, 
+  setCurrentAnswers4, 
+
+  moduleNumber,
+  setSelected, 
+  questionNumber, 
+  selected
+}) => {
 
   const [currentInput, setCurrentInput] = useState('')
 

@@ -1,4 +1,4 @@
-import { addDoc, collection, deleteDoc, doc, Timestamp, updateDoc } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc, Timestamp, updateDoc, setDoc } from "firebase/firestore";
 import { useReducer, useEffect, useState } from "react";
 import { db } from '../config'
 
@@ -48,6 +48,18 @@ export const useFirestore = (col) => {
         }
     }
 
+    const setDocument = async (docu, docuid) => {
+        dispatch({type: 'IS_PENDING'})
+
+        try{
+            const createdAt = Timestamp.fromDate(new Date())
+            const settedDocument = await setDoc(doc(db, col, docuid), docu);
+        }
+        catch (error){
+
+        }
+    }
+
     const deleteDocument = async (id) => {
         dispatch({ type: 'IS_PENDING' })
 
@@ -90,5 +102,5 @@ export const useFirestore = (col) => {
     }, [])
 
 
-    return { addDocument, deleteDocument, updateDocument, state }
+    return { addDocument, setDocument, deleteDocument, updateDocument, state }
 }

@@ -24,6 +24,12 @@ const Test = ({testnumber}) => {
 
   const [currentTest, setCurrentTest] = useState()
   const [currentAnswers, setCurrentAnswers] = useState({})
+
+  const [currentAnswers1, setCurrentAnswers1] = useState({module: '', answers:{}})
+  const [currentAnswers2, setCurrentAnswers2] = useState({module: '', answers:{}})
+  const [currentAnswers3, setCurrentAnswers3] = useState({module: '', answers:{}})
+  const [currentAnswers4, setCurrentAnswers4] = useState({module: '', answers:{}})
+
   const [questionNumber, setQuestionNumber] = useState(1)
   const [currentQuestion, setCurrentQuestion] = useState('')
   const [selected, setSelected] = useState()
@@ -34,15 +40,11 @@ const Test = ({testnumber}) => {
 
   console.log(currentAnswers)
 
-  const { addDocument, state } = useFirestore('tests')
-
   const { user } = useAuthContext()   
 
-  if(user && user.email) {
-    console.log(user)
-  }
-
-
+  console.log(user.uid)
+  const { addDocument, state } = useFirestore(`students/${user.uid}/tests`)
+  
 
   //gets which number user clicked on and sets state to that test and the 1st question
   useEffect(() => {
@@ -112,10 +114,14 @@ const Test = ({testnumber}) => {
       setCurrentTest(SAT2023PT3RWM2BQ)
       setCurrentQuestion(SAT2023PT3RWM2BQ[28])
       setQuestionNumber(28)
+      setCurrentAnswers1({module: 'RW1', currentAnswers: currentAnswers})
+      setCurrentAnswers2(prev => ({...prev, module: 'RW2B'}))
     } else if (numCorrect < 15){
       setCurrentTest(SAT2023PT3RWM2AQ)
       setCurrentQuestion(SAT2023PT3RWM2AQ[28])
       setQuestionNumber(28)
+      setCurrentAnswers1({module: 'RW1', currentAnswers: currentAnswers})
+      setCurrentAnswers2(prev => ({...prev, module: 'RW2A'})) 
     }
     setSelected('')
     setModuleNumber(prev => prev + 1)
@@ -172,7 +178,6 @@ const Test = ({testnumber}) => {
         userDisplayName: user.displayName
       }
       
-      
       await addDocument(project)
       if(state.error == null){
         console.log('hello')
@@ -181,7 +186,6 @@ const Test = ({testnumber}) => {
     }
   }
 
-  console.log(questionNumber)
   console.log(currentAnswers)
 
   return (
@@ -241,7 +245,19 @@ const Test = ({testnumber}) => {
         <Question 
           currentQuestion={currentQuestion} 
           currentAnswers={currentAnswers} 
+          currentAnswers1={currentAnswers1}
+          currentAnswers2={currentAnswers2}
+          currentAnswers3={currentAnswers3}
+          currentAnswers4={currentAnswers4}
+
           setCurrentAnswers={setCurrentAnswers} 
+          setCurrentAnswers1={setCurrentAnswers1} 
+          setCurrentAnswers2={setCurrentAnswers2} 
+          setCurrentAnswers3={setCurrentAnswers3} 
+          setCurrentAnswers4={setCurrentAnswers4} 
+
+          moduleNumber={moduleNumber}
+
           questionNumber={questionNumber} 
           setSelected={setSelected}
           selected={selected}

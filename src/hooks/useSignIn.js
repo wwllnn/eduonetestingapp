@@ -11,8 +11,8 @@ export const useSignIn = () => {
 
   const signin = () => {
     signInWithPopup(auth, provider).then((data) => {
-      console.log(data.user.email)
-      dispatch({ type: 'LOGIN', payload: data.user.email})    
+      console.log(data.user)
+      dispatch({ type: 'LOGIN', payload: data.user})    
     })
     .catch((err) => {
       setError(err.message)

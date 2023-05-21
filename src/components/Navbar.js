@@ -3,25 +3,28 @@ import logo from './logo.png'
 import './Navbar.css'
 import { useAuthContext } from '../hooks/useAuthContext'
 import { useLogout } from '../hooks/useLogout'
+
 const Navbar = () => {
 
   const { user } = useAuthContext()
   const { logout } = useLogout()
 
-  const [userEmail, setUserEmail] = useState('')
+  const [userDisplayName, setUserDisplayName] = useState('')
 
   useEffect(() => {
-    if(user && user.email){
-     setUserEmail(user.email)
+    if(user && user.displayName){
+     setUserDisplayName(user.displayName)
+     console.log(user)
+     console.log(user.displayName)
     }
-  }, [user])
+  })
 
   return (
     <div className='navbar'>
       <div className='navbar-inner'>
         <img className='logo' src={logo} />
         <div className='navbar-innerright'>
-          {user && <div>Welcome, {userEmail}</div>}
+          {user && <div>Hello {user.displayName}</div>}
           {user && <div className='navbar-signout' onClick={logout}>Sign out</div>}
         </div>
       </div>
