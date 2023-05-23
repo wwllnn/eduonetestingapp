@@ -25,11 +25,6 @@ const Test = ({testnumber}) => {
   const [currentTest, setCurrentTest] = useState()
   const [currentAnswers, setCurrentAnswers] = useState({})
 
-  const [currentAnswers1, setCurrentAnswers1] = useState({module: '', answers:{}})
-  const [currentAnswers2, setCurrentAnswers2] = useState({module: '', answers:{}})
-  const [currentAnswers3, setCurrentAnswers3] = useState({module: '', answers:{}})
-  const [currentAnswers4, setCurrentAnswers4] = useState({module: '', answers:{}})
-
   const [questionNumber, setQuestionNumber] = useState(1)
   const [currentQuestion, setCurrentQuestion] = useState('')
   const [selected, setSelected] = useState()
@@ -38,14 +33,12 @@ const Test = ({testnumber}) => {
   const [mathModal2, setMathModal2] = useState(false)
   const [moduleNumber, setModuleNumber] = useState(1)
 
-  console.log(currentAnswers)
-
   const { user } = useAuthContext()   
 
-  console.log(user.uid)
-  const { addDocument, state } = useFirestore(`students/${user.uid}/tests`)
+  const date = new Date();
+  const day = date.toDateString()
+  const { addDocument, state } = useFirestore(`students/${user.uid}/tests/${day}`)
   
-
   //gets which number user clicked on and sets state to that test and the 1st question
   useEffect(() => {
     if(testnumber === 3){
@@ -60,7 +53,6 @@ const Test = ({testnumber}) => {
       setCurrentQuestion(SAT2023PT4RWM1Q[1])
     }
   }, [])
-
 
   //on click for nav, changes the question number and the question state
   const changeQuestion = (num) => {
@@ -104,7 +96,6 @@ const Test = ({testnumber}) => {
     setMathModal2(true)
   }
 
-
   //for reading writing module 1
   //start rw module2
   const handleSaveandChangeRW1 = () => {
@@ -114,14 +105,10 @@ const Test = ({testnumber}) => {
       setCurrentTest(SAT2023PT3RWM2BQ)
       setCurrentQuestion(SAT2023PT3RWM2BQ[28])
       setQuestionNumber(28)
-      setCurrentAnswers1({module: 'RW1', currentAnswers: currentAnswers})
-      setCurrentAnswers2(prev => ({...prev, module: 'RW2B'}))
     } else if (numCorrect < 15){
       setCurrentTest(SAT2023PT3RWM2AQ)
       setCurrentQuestion(SAT2023PT3RWM2AQ[28])
       setQuestionNumber(28)
-      setCurrentAnswers1({module: 'RW1', currentAnswers: currentAnswers})
-      setCurrentAnswers2(prev => ({...prev, module: 'RW2A'})) 
     }
     setSelected('')
     setModuleNumber(prev => prev + 1)
@@ -162,9 +149,10 @@ const Test = ({testnumber}) => {
     console.log(user)
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
 
+
+  const handleSubmit = async (e) => {
+      e.preventDefault()
     if(user){
       //create current date data
       let currentDate = new Date()
@@ -172,6 +160,7 @@ const Test = ({testnumber}) => {
 
       //create project object to send
       const project = {
+        testtype: currentTest,
         currentAnswers,
         date: formattedDate,
         userEmail: user.email,
@@ -245,16 +234,7 @@ const Test = ({testnumber}) => {
         <Question 
           currentQuestion={currentQuestion} 
           currentAnswers={currentAnswers} 
-          currentAnswers1={currentAnswers1}
-          currentAnswers2={currentAnswers2}
-          currentAnswers3={currentAnswers3}
-          currentAnswers4={currentAnswers4}
-
-          setCurrentAnswers={setCurrentAnswers} 
-          setCurrentAnswers1={setCurrentAnswers1} 
-          setCurrentAnswers2={setCurrentAnswers2} 
-          setCurrentAnswers3={setCurrentAnswers3} 
-          setCurrentAnswers4={setCurrentAnswers4} 
+          setCurrentAnswers={setCurrentAnswers}
 
           moduleNumber={moduleNumber}
 

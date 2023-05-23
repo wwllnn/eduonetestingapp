@@ -1179,9 +1179,9 @@ export const SAT2023PT3MM2AQ = {
    98: {
     img: 'satpt3ma22.png',
     choice1img: 'satpt3ma22-1.svg',
-    choice2img: 'satpt3ma22-1.svg',
-    choice3img: 'satpt3ma22-1.svg',
-    choice4img: 'satpt3ma22-1.svg',
+    choice2img: 'satpt3ma22-2.svg',
+    choice3img: 'satpt3ma22-3.svg',
+    choice4img: 'satpt3ma22-4.svg',
     answer: 'A'
    }
 }

@@ -16,10 +16,12 @@ const Home = () => {
 
   const { setDocument, state } = useFirestore('students')
 
+  const unfinishedtests = useCollection(`students/${user.uid}/tests`)
+
+  console.log(unfinishedtests)
+
   useEffect(() => {
-
     setDocument({email: user.email, name: user.displayName}, user.uid)
-
   }, [])
 
   const handleTestClick = (testname) => {
@@ -29,10 +31,22 @@ const Home = () => {
   
   return (
     <div className='home'>
-      <div className='home-title'>Available Tests</div>
-      <div className='home-test' onClick={() => handleTestClick('3')}>SAT Practice Test 3</div>
-      <div className='home-test'>SAT Practice Test 4</div>
-      {openModal && <BeginTestModal test={currentTest} setOpenModal={setOpenModal} />}
+      <div className='home-inner'>
+        <div>
+          <div className='home-title'>Start New Test</div>
+          <div className='home-test' onClick={() => handleTestClick('3')}>SAT Practice Test 3</div>
+          <div className='home-test'>SAT Practice Test 4</div>
+          {openModal && <BeginTestModal test={currentTest} setOpenModal={setOpenModal} />}
+        </div>
+        <div className='home-inner-right'>
+          <div className='home-title'>
+            Continue Test
+          </div>
+          {unfinishedtests.documents && unfinishedtests.documents.map((i, t) => {
+            return <div className='home-test'>{unfinishedtests.documents[t].date}</div>
+          })}
+        </div>
+      </div>
     </div>
   )
 }

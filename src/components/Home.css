@@ -2,6 +2,14 @@
   
 }
 
+.home-inner{
+  display: flex;
+}
+
+.home-inner-right{
+  margin-left: 5rem;
+}
+
 .home-title{
   font-size: 1.5rem;
 }
