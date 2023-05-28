@@ -3,13 +3,6 @@ import { useReducer, useEffect, useState } from "react";
 import { db } from '../config'
 
 
-let initialState = {
-    document: null, 
-    isPending: false,
-    error: null,
-    success: null
-}
-
 const firestoreReducer = (state, action) => {
     switch (action.type) {
         case 'IS_PENDING':
@@ -25,26 +18,38 @@ const firestoreReducer = (state, action) => {
 
 
 export const useFirestore = (col) => {
-    const [state, dispatch] = useReducer(firestoreReducer, initialState)
+    const [state, dispatch] = useReducer(firestoreReducer, {
+        document: null, 
+        isPending: false,
+        error: null,
+        success: null
+    })
     const [isCancelled, setIsCancelled] = useState(false)
-    
+    const [docuID, setDocuID] = useState('')
+
+    useEffect(() => {
+        console.log(state)
+        console.log(docuID)
+    }, [state, docuID])
 
     const addDocument = async (doc) => {
         dispatch({ type: 'IS_PENDING' })
+        setIsCancelled(false)
 
         try {
             const createdAt = Timestamp.fromDate(new Date())
-            const addedDocument = await addDoc(collection(db, col),{ ...doc, createdAt })
-
+            const docRef = await addDoc(collection(db, col),{ ...doc, createdAt })
+            
             if(!isCancelled){
-                dispatch({ type: 'ADDED_DOCUMENT', payload: addedDocument})
+                dispatch({ type: 'ADDED_DOCUMENT', payload: 'helo'})
+                setDocuID(docRef.id)
+                console.log(docRef)
             }
         }
         catch (error) {
             if(!isCancelled){ 
                 dispatch({ type: 'ERROR', payload: error.message})
             }
-            console.log(error)
         }
     }
 
@@ -52,11 +57,15 @@ export const useFirestore = (col) => {
         dispatch({type: 'IS_PENDING'})
 
         try{
-            const createdAt = Timestamp.fromDate(new Date())
-            const settedDocument = await setDoc(doc(db, col, docuid), docu);
+            await setDoc(doc(db, col, docuid), docu);
+            if(!isCancelled){
+                dispatch({ type: 'UPDATED_DOCUMENT' })
+            }
         }
         catch (error){
-
+            if(!isCancelled){
+                dispatch({ type: 'ERROR', payload: 'could not set' })
+            }
         }
     }
 
@@ -95,12 +104,11 @@ export const useFirestore = (col) => {
         }   
     }
 
-
     //clean up
     useEffect(() => {
         return () => setIsCancelled(true)
     }, [])
 
 
-    return { addDocument, setDocument, deleteDocument, updateDocument, state }
+    return { addDocument, setDocument, deleteDocument, updateDocument, docuID, state }
 }

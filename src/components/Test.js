@@ -37,18 +37,17 @@ const Test = ({testnumber}) => {
 
   const date = new Date();
   const day = date.toDateString()
-  const { addDocument, state } = useFirestore(`students/${user.uid}/tests/${day}`)
+  const { addDocument, setDocument, state } = useFirestore(`students/${user.uid}/tests`)
   
   //gets which number user clicked on and sets state to that test and the 1st question
+  console.log(state)
   useEffect(() => {
     if(testnumber === 3){
-      console.log(SAT2023PT3RWM1Q)
       setCurrentTest(SAT2023PT3RWM1Q)
       setCurrentQuestion(SAT2023PT3RWM1Q[1])
     }
   
     if(testnumber === 4){
-      console.log(SAT2023PT4RWM1Q)
       setCurrentTest(SAT2023PT4RWM1Q)
       setCurrentQuestion(SAT2023PT4RWM1Q[1])
     }
@@ -84,6 +83,7 @@ const Test = ({testnumber}) => {
   //set modal true to next module of r/w
   const nextModule = () => {
     setNextModal(true)
+    //setDocument
   }
 
   //set modal true to 1st math module
@@ -129,7 +129,6 @@ const Test = ({testnumber}) => {
 
   const handleSaveandChangeMath = () => {
     //grades current module
-    //grades current module
     const numCorrect = gradeModule(currentAnswers, currentTest)
     if(numCorrect >= 15){
       setCurrentTest(SAT2023PT3MM2BQ)
@@ -145,11 +144,6 @@ const Test = ({testnumber}) => {
     setMathModal2(false)
   }
 
-  const FinishTest = () => {
-    console.log(user)
-  }
-
-
 
   const handleSubmit = async (e) => {
       e.preventDefault()
@@ -164,12 +158,14 @@ const Test = ({testnumber}) => {
         currentAnswers,
         date: formattedDate,
         userEmail: user.email,
-        userDisplayName: user.displayName
+        userDisplayName: user.displayName,
+        moduleNumber
       }
       
-      await addDocument(project)
+      const testinfo = await addDocument(project)
+      console.log(testinfo)
+
       if(state.error == null){
-        console.log('hello')
         navigate('/')
       }
     }

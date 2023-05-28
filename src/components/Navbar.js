@@ -14,8 +14,6 @@ const Navbar = () => {
   useEffect(() => {
     if(user && user.displayName){
      setUserDisplayName(user.displayName)
-     console.log(user)
-     console.log(user.displayName)
     }
   })
 

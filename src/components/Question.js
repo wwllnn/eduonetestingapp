@@ -28,42 +28,11 @@ const Question = ({
   const handleSelect = (letter) => {
     setSelected(letter)
     setCurrentAnswers({...currentAnswers, [questionNumber]:letter})
-
-    if (moduleNumber == 1){
-      setCurrentAnswers1({...currentAnswers, [questionNumber]:letter})
-    }
-
-    if (moduleNumber == 2){
-      setCurrentAnswers2({...currentAnswers, [questionNumber]:letter})
-    }
-
-    if (moduleNumber == 3){
-      setCurrentAnswers3({...currentAnswers, [questionNumber]:letter})
-    }
-
-    if (moduleNumber == 4){
-      setCurrentAnswers4({...currentAnswers, [questionNumber]:letter})
-    }
   }
 
   const handleInput = (i) => {
     setCurrentAnswers({...currentAnswers, [questionNumber]:i})
 
-    if (moduleNumber == 1){
-      setCurrentAnswers1({...currentAnswers, [questionNumber]:i})
-    }
-
-    if (moduleNumber == 2){
-      setCurrentAnswers2({...currentAnswers, [questionNumber]:i})
-    }
-
-    if (moduleNumber == 3){
-      setCurrentAnswers3({...currentAnswers, [questionNumber]:i})
-    }
-
-    if (moduleNumber == 4){
-      setCurrentAnswers4({...currentAnswers, [questionNumber]:i})
-    }
   }
 
   console.log(currentAnswers)

@@ -1,9 +1,13 @@
 import React from 'react'
 import './BeginTestModal.css'
 import { Link } from 'react-router-dom'
+import { useFirestore } from '../hooks/useFirestore.js'
+import { useAuthContext } from '../hooks/useAuthContext'
 
-const BeginTestModal = ({test, setOpenModal}) => {
+const BeginTestModal = ({test, setOpenModal, setCurrentTestID}) => {
+
   let testlink = 'satpt' + test
+
   return (
     <div className='begintestmodal'>
       <div className='begintestmodal-background'/>
