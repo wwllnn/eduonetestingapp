@@ -10,6 +10,7 @@ import { doc, getDoc } from "firebase/firestore";
 
 import { PDFDownloadLink } from "@react-pdf/renderer"
 import ScorePrint from "./ScorePrint"
+import useGrade from '../hooks/useGrade'
 
 
 
@@ -24,14 +25,14 @@ const Home = () => {
   const { setDocument, state } = useFirestore('students')
 
   const unfinishedtests = useCollection(`students/${user.uid}/tests`)
+
+  const { gradeSAT2023PT3, prepDataSAT3 } = useGrade()
   
 
   const students = useCollection('students')
 
   
-  const tests = useCollection(currentStudent ? `students/${currentStudent.id}/tests`: 'students')
-  console.log(tests)
-  
+  const tests = useCollection(currentStudent ? `students/${currentStudent.id}/tests`: 'students')  
 
   useEffect(() => {
     setDocument({email: user.email, name: user.displayName}, user.uid)
@@ -54,7 +55,9 @@ const Home = () => {
   }
 
   const gradeTestClick = (i) => {
-    console.log(i[1])
+    //useGrade()
+    console.log(i)
+    const hello = prepDataSAT3(i)
   }
   
   return (
@@ -95,12 +98,17 @@ const Home = () => {
         }
         {
         currentStudent && tests && tests.documents && Object.entries(tests.documents).map((t, i) => {
+           return <div key={i} onClick={() => gradeTestClick(t[1].currentAnswers)}>{t[1].date}</div>
+        })
+        }
+        {
+        currentStudent && tests && tests.documents && Object.entries(tests.documents).map((t, i) => {
            return <div key={i}>      
            <PDFDownloadLink className='link' document={<ScorePrint testinfo={t[1]}/>}>
            {({loading}) => (loading ? <button>Loading</button> : <button className='student-entry'>{t[1].date}</button>)}
            </PDFDownloadLink></div>
         })
-      }
+        }
         </div>
     </div>
   )

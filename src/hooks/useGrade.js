@@ -1,13 +1,83 @@
 import { 
   SAT2023PT3RWM1Q,
+  SAT2023PT3RWM1BD,
+
   SAT2023PT3RWM2AQ,
+  SAT2023PT3RWM2ABD,
+
   SAT2023PT3RWM2BQ,
+  SAT2023PT3RWM2BBD,
+
   SAT2023PT3MM1Q,
+  SAT2023PT3MM1BD,
+
   SAT2023PT3MM2AQ,
-  SAT2023PT3MM2BQ
+  SAT2023PT3MM2ABD,
+
+  SAT2023PT3MM2BQ,
+  SAT2023PT3MM2BBD,
+
 } from '../data.js' 
 
 const useGrade = () => {
+
+  const prepDataSAT3 = (currentAnswers) => {
+
+    let Rwrongcounter = 0
+    let Mwrongcounter = 0
+    let categoriesRW = {}
+    let difficultiesRW = {}
+
+    let categoriesM = {}
+    let difficultiesM = {}
+
+    let wrongNumbersRWM1 = {}
+    let wrongNumbersMM1 = {}
+
+    for (let i = 1; i <= 27; i++){
+      if (currentAnswers[i] == SAT2023PT3RWM1Q[i].answer){
+        console.log('right')
+      } else {
+        Rwrongcounter++
+        console.log('wrong')
+        categoriesRW[i] = SAT2023PT3RWM1BD[i].skill
+        difficultiesRW[i] = SAT2023PT3RWM1BD[i].difficulty
+      }
+    }
+
+    for (let i = 28; i <= 54; i++){
+      if(currentAnswers[i] == SAT2023PT3RWM2AQ[i].answer && Rwrongcounter >= 12){
+        console.log('right2A')
+      } else if (currentAnswers[i] == SAT2023PT3RWM2BQ[i].answer && Rwrongcounter < 12) {
+        console.log('right2B')
+      } else {
+        console.log('wrong2')
+      }
+    }
+
+    for (let i = 55; i <= 76; i++){
+      if(currentAnswers[i] == SAT2023PT3MM1Q[i].answer){
+        console.log('rightM')
+      } else {
+        Mwrongcounter++
+        console.log('wrongM')
+      }
+    }
+
+    for (let i = 77; i <= 98; i++){
+      if(currentAnswers[i] == SAT2023PT3MM2AQ[i].answer && Mwrongcounter >= 10){
+        console.log('right2AM')
+      } else if (currentAnswers[i] == SAT2023PT3MM2BQ[i].answer && Mwrongcounter < 10) {
+        console.log('right2BM')
+      } else {
+        console.log('wrong2M')
+      }
+    }
+
+    
+    console.log(categoriesRW)
+    console.log(difficultiesRW)
+  }
 
   //check current answers and creates object with incorrect question numbers and answers
   const gradeSAT2023PT3 = (currentanswers) => {
@@ -29,8 +99,9 @@ const useGrade = () => {
     let rightNumbers = {}
 
     //grade the first module of reading
-    Object.entries(currentanswers).map(([key, value]) => {
+    Object.entries(currentanswers).map(([key, value], i) => {
       //add object pair into rightNumbers if correct, wrongNumbers if incorrect
+      console.log(i)
       if(key <= 27){
         if(value == SAT2023PT3RWM1Q[key]){
           rightNumbers[key] = value
@@ -41,33 +112,70 @@ const useGrade = () => {
       }
     })
 
+    for(let i = 0; i <= 27; i++){
+      if(currentanswers[i] == SAT2023PT3RWM1Q[i].answer){
+        console.log('right')
+      } else {
+        console.log('wrong')
+        //wrongNumbers[i] = value
+      //  wrongNumbersRWM1[i] = value
+      }
+    }
+
+    for(let i = 28; i <= 54; i++){
+      if(currentanswers[i]){
+        console.log('exists')
+      } else {
+        console.log('does not')
+      }
+    }
+
+    for(let i = 55; i <= 76; i++){
+      if(currentanswers[i]){
+        console.log('exists')
+      } else {
+        console.log('does not')
+      }
+    }
+
+    for(let i = 77; i <= 98; i++){
+      if(currentanswers[i]){
+        console.log('exists')
+      } else {
+        console.log('does not')
+      }
+    }
+
+
     //grade the next module of reading easy
     if(Object.keys(wrongNumbersRWM1).length >= 10){
-      Object.entries(currentAnswersReading).map(([key, value]) => {
+      Object.entries(currentanswers).map(([key, value]) => {
         //add object pair into rightNumbers if correct, wrongNumbers if incorrect
-        if(value == SAT2023PT3RWM2A[key]){
-          rightNumbers[key] = value
-        } else {
-          wrongNumbers[key] = value
-          wrongNumbersRWM2[key] = value
+        if(key >= 28 && key <= 54){
+          if(value == SAT2023PT3RWM2AQ[key].answer){
+            rightNumbers[key] = value
+          } else {
+            wrongNumbers[key] = value
+            wrongNumbersRWM2[key] = value
+          }
         }
       }) //or hard
     } else if(Object.keys(wrongNumbersRWM1).length <= 10) {
-      Object.entries(currentAnswersReading).map(([key, value]) => {
+      Object.entries(currentanswers).map(([key, value]) => {
         //add object pair into rightNumbers if correct, wrongNumbers if incorrect
-        if(value == SAT2023PT3RWM2B[key]){
-          rightNumbers[key] = value
-        } else {
-          wrongNumbers[key] = value
-          wrongNumbersRWM2[key] = value
+
+        if(key >= 28 &&  key <= 54){
+          if(value == SAT2023PT3RWM2BQ[key].answer){
+            rightNumbers[key] = value
+          } else {
+            wrongNumbers[key] = value
+            wrongNumbersRWM2[key] = value
+          }
         }
       })
     }
 
-    //see which category each wrong answer matches to for module 1 rw
 
-    //map over the answer key and if the wrong numbers has a matching key then
-    //have a new pair with key and skill name added to the category object
     Object.keys(SAT2023PT3RWM1BD).map((q) => {
       if(wrongNumbersRWM1.hasOwnProperty(q)){
         categoriesRW[q] = SAT2023PT3RWM1BD[q].skill
@@ -75,7 +183,6 @@ const useGrade = () => {
       }
     })
 
-    //categorize module 2a for reading
     if(Object.keys(wrongNumbersRWM1).length >= 10){
       Object.keys(SAT2023PT3RWM2ABD).map((q) => {
         if(wrongNumbers.hasOwnProperty(q)){
@@ -85,9 +192,7 @@ const useGrade = () => {
       })
     }
 
-    //categorize module 2b for reading
     if(Object.keys(wrongNumbersRWM1).length <= 10){
-      //loop through answer key
       Object.keys(SAT2023PT3RWM2BBD).map((q) => {
         if(wrongNumbers.hasOwnProperty(q)){
           categoriesRW[q] = SAT2023PT3RWM2BBD[q].skill
@@ -97,37 +202,47 @@ const useGrade = () => {
     }
 
     //grade the first module of math
-    Object.entries(currentAnswersMath).map(([key, value]) => {
-      if(value == SAT2023PT3MM1[key]){
-        console.log(key + 'right')
-        rightNumbers[key] = value
-      } else {
-        console.log(key + 'wrong')
-        wrongNumbers[key] = value
-        wrongNumbersMM1[key] = value
+    Object.entries(currentanswers).map(([key, value]) => {
+
+      if(key >= 55 && key <= 76){
+
+        if(value == SAT2023PT3MM1Q[key].answer){
+          console.log(key + 'right')
+          rightNumbers[key] = value
+        } else {
+          console.log(key + 'wrong')
+          wrongNumbers[key] = value
+          wrongNumbersMM1[key] = value
+        }
       }
     })
 
     //grade the next module of math easy
     if(Object.keys(wrongNumbersMM1).length >= 10){
-      //loop through currentanswers
-      Object.entries(currentAnswersMath).map(([key, value]) => {
+      Object.entries(currentanswers).map(([key, value]) => {
         //add object pair into rightNumbers if correct, wrongNumbers if incorrect
-        if(value == SAT2023PT3MM2A[key]){
-          rightNumbers[key] = value
-        } else {
-          wrongNumbers[key] = value
-          wrongNumbersMM2[key] = value
+        
+        if(key >= 77){
+          if(value == SAT2023PT3MM2AQ[key].answer){
+            rightNumbers[key] = value
+          } else {
+            wrongNumbers[key] = value
+            wrongNumbersMM2[key] = value
+          }
         }
+
       }) //or hard
     } else if(Object.keys(wrongNumbersMM1).length <= 10) {
-      Object.entries(currentAnswersMath).map(([key, value]) => {
+      Object.entries(currentanswers).map(([key, value]) => {
         //add object pair into rightNumbers if correct, wrongNumbers if incorrect
-        if(value == SAT2023PT3MM2B[key]){
-          rightNumbers[key] = value
-        } else {
-          wrongNumbers[key] = value
-          wrongNumbersMM2[key] = value
+
+        if(key >= 77){
+          if(value == SAT2023PT3MM2BQ[key].answer){
+            rightNumbers[key] = value
+          } else {
+            wrongNumbers[key] = value
+            wrongNumbersMM2[key] = value
+          }
         }
       })
     }
@@ -436,7 +551,7 @@ const useGrade = () => {
     return skillImprovement
   }
 
-  return {gradeSAT2023PT3, generateSAT2023PT3Skills}
+  return {gradeSAT2023PT3, generateSAT2023PT3Skills, prepDataSAT3}
 }
 
 export default useGrade
