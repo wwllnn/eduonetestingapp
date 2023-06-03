@@ -11,7 +11,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { PDFDownloadLink } from "@react-pdf/renderer"
 import ScorePrint from "./ScorePrint"
 import useGrade from '../hooks/useGrade'
-
+import TestPrint from './TestPrint'
 
 
 const Home = () => {
@@ -57,7 +57,10 @@ const Home = () => {
   const gradeTestClick = (i) => {
     //useGrade()
     console.log(i)
-    const hello = prepDataSAT3(i)
+    //console.log(i.date)
+    //console.log(i.studentName)
+    //const hello = prepDataSAT3(i.currentAnswers, i.studentName, i.date)
+    //console.log(hello)
   }
   
   return (
@@ -73,7 +76,7 @@ const Home = () => {
           </div>
           <div className='home-inner-right'>
             <div className='home-title'>
-              Continue Test
+              You've completed this test on
             </div>
             {unfinishedtests.documents && unfinishedtests.documents.map((i, t) => {
               return <div className='home-test' key={t}>{unfinishedtests.documents[t].date}</div>
@@ -85,11 +88,13 @@ const Home = () => {
           user.email.includes('educate-one') && students && students.documents &&
           <div>
             <div className='student-list-header'> Students</div>
-          <div className='student-list'>
-            {Object.entries(students.documents).map((i) => {
-              return <div className='student-entry' onClick={() => handleStudentClick(i)}>{i[1].name}</div>
-            })}
-          </div>
+            <div className='student-list'>
+              {Object.entries(students.documents).map((i, n) => {
+                if(!i[1].email.includes('educate-one.com')){
+                  return <div className='student-entry' key={n} onClick={() => handleStudentClick(i)}>{i[1].name}                </div>
+                }
+              })}
+            </div>
           </div>
         }
         <div className='tests-container'>
@@ -98,17 +103,10 @@ const Home = () => {
         }
         {
         currentStudent && tests && tests.documents && Object.entries(tests.documents).map((t, i) => {
-           return <div key={i} onClick={() => gradeTestClick(t[1].currentAnswers)}>{t[1].date}</div>
+           return <div key={i} onClick={() => gradeTestClick(t[1])}>{t[1].date}</div>
         })
         }
-        {
-        currentStudent && tests && tests.documents && Object.entries(tests.documents).map((t, i) => {
-           return <div key={i}>      
-           <PDFDownloadLink className='link' document={<ScorePrint testinfo={t[1]}/>}>
-           {({loading}) => (loading ? <button>Loading</button> : <button className='student-entry'>{t[1].date}</button>)}
-           </PDFDownloadLink></div>
-        })
-        }
+
         </div>
     </div>
   )

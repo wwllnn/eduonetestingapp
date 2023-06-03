@@ -17,6 +17,7 @@ import gradeModule from '../hooks/gradeModule.js'
 import { useFirestore } from '../hooks/useFirestore.js'
 import { useAuthContext } from '../hooks/useAuthContext.js'
 import { useNavigate } from 'react-router-dom'
+import useGrade from '../hooks/useGrade.js'
 
 const Test = ({testnumber}) => {
 
@@ -38,6 +39,8 @@ const Test = ({testnumber}) => {
   const date = new Date();
   const day = date.toDateString()
   const { addDocument, setDocument, state } = useFirestore(`students/${user.uid}/tests`)
+
+  const { prepDataSAT3 } = useGrade()
   
   //gets which number user clicked on and sets state to that test and the 1st question
   console.log(state)
@@ -51,7 +54,7 @@ const Test = ({testnumber}) => {
       setCurrentTest(SAT2023PT4RWM1Q)
       setCurrentQuestion(SAT2023PT4RWM1Q[1])
     }
-  }, [])
+  }, [testnumber])
 
   //on click for nav, changes the question number and the question state
   const changeQuestion = (num) => {
@@ -124,6 +127,7 @@ const Test = ({testnumber}) => {
     setQuestionNumber(55)
     setSelected('')
     setModuleNumber(prev => prev + 1)
+    
     setMathModal(false)
   }
 
@@ -153,16 +157,18 @@ const Test = ({testnumber}) => {
       let formattedDate = currentDate.toDateString()
 
       //create project object to send
-      const project = {
-        testtype: currentTest,
-        currentAnswers,
-        date: formattedDate,
-        userEmail: user.email,
-        userDisplayName: user.displayName,
-        moduleNumber
+      const hello = prepDataSAT3(
+        currentAnswers, 
+        user.displayName, 
+        formattedDate
+      )
+
+      const fbDATA = {
+        ...hello,
+        currentAnswers
       }
       
-      const testinfo = await addDocument(project)
+      const testinfo = await addDocument(fbDATA)
       console.log(testinfo)
 
       if(state.error == null){
