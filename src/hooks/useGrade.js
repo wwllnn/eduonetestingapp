@@ -56,20 +56,20 @@ const useGrade = () => {
     
     //MODULE READING 2
     for (let i = 28; i <= 54; i++){
-      if((currentAnswers[i] == SAT2023PT3RWM2AQ[i].answer) && Rwrongcounter >= 12){
+      if((currentAnswers[i] == SAT2023PT3RWM2AQ[i].answer) && Rwrongcounter > 12){
         totalright++
-      } else if ((currentAnswers[i] == SAT2023PT3RWM2BQ[i].answer) && Rwrongcounter < 12) {
+      } else if ((currentAnswers[i] == SAT2023PT3RWM2BQ[i].answer) && Rwrongcounter <= 12) {
         totalright++
+      } else if (Rwrongcounter <= 12){
+        totalwrong++
+        readingwrong++
+        categoriesRW[SAT2023PT3RWM2BBD[i].skill] = categoriesRW[SAT2023PT3RWM2BBD[i].skill] + 1  || 1
+        difficultiesRW[SAT2023PT3RWM2BBD[i].difficulty] = difficultiesRW[SAT2023PT3RWM2BBD[i].difficulty] + 1 || 1
       } else if (Rwrongcounter > 12){
         totalwrong++
         readingwrong++
         categoriesRW[SAT2023PT3RWM2ABD[i].skill] = categoriesRW[SAT2023PT3RWM2ABD[i].skill] + 1  || 1
         difficultiesRW[SAT2023PT3RWM2ABD[i].difficulty] = difficultiesRW[SAT2023PT3RWM2ABD[i].difficulty] + 1 || 1
-      } else {
-        totalwrong++
-        readingwrong++
-        categoriesRW[SAT2023PT3RWM2BBD[i].skill] = categoriesRW[SAT2023PT3RWM2BBD[i].skill] + 1  || 1
-        difficultiesRW[SAT2023PT3RWM2BBD[i].difficulty] = difficultiesRW[SAT2023PT3RWM2BBD[i].difficulty] + 1 || 1
       }
     }
 
@@ -90,20 +90,24 @@ const useGrade = () => {
 
     //MODULE MATH 2
     for (let i = 77; i <= 98; i++){
-      if(currentAnswers[i] == SAT2023PT3MM2AQ[i].answer && Mwrongcounter >= 10){
+      if(currentAnswers[i] == SAT2023PT3MM2AQ[i].answer && Mwrongcounter > 10){
         totalright++
-      } else if (currentAnswers[i] == SAT2023PT3MM2BQ[i].answer && Mwrongcounter < 10) {
+      } else if (currentAnswers[i] == SAT2023PT3MM2BQ[i].answer && Mwrongcounter <= 10) {
         totalright++
-      } else if (Mwrongcounter < 10){
+      } else if (Mwrongcounter <= 10){
+        //hard version
+        totalwrong++
+        mathwrong++
+        //this doesn't work for some reason
+        categoriesM[SAT2023PT3MM2BBD[i].skill] = categoriesM[SAT2023PT3MM2BBD[i].skill] + 1  || 1
+        //but this does
+        difficultiesM[SAT2023PT3MM2BBD[i].difficulty] = difficultiesM[SAT2023PT3MM2BBD[i].difficulty] + 1 || 1
+      } else if (Mwrongcounter > 10){
+        //easy version
         totalwrong++
         mathwrong++
         categoriesM[SAT2023PT3MM2ABD[i].skill] = categoriesM[SAT2023PT3MM2ABD[i].skill] + 1  || 1
         difficultiesM[SAT2023PT3MM2ABD[i].difficulty] = difficultiesM[SAT2023PT3MM2ABD[i].difficulty] + 1 || 1
-      } else {
-        totalwrong++
-        mathwrong++
-        categoriesM[SAT2023PT3MM2BBD[i].skill] = categoriesM[SAT2023PT3MM2BBD[i].skill] + 1  || 1
-        difficultiesM[SAT2023PT3MM2BBD[i].difficulty] = difficultiesM[SAT2023PT3MM2BBD[i].difficulty] + 1 || 1
       }
     }
 
@@ -121,7 +125,6 @@ const useGrade = () => {
     const readingRight = 54 - readingwrong
     const mathRight = 44 - mathwrong
     
-
     
     //composite
     //reading
@@ -139,10 +142,7 @@ const useGrade = () => {
     const totalRXadditional = readingRXadditional + mathRXadditional
 
 
-
     //mastery percentages for difficulties math
-
-    
 
 
     //skill mastery reading
@@ -154,15 +154,21 @@ const useGrade = () => {
     )
     console.log(skillsRW)
 
+    console.log(categoriesRW)
+    console.log(difficultiesRW)
+
+    console.log(categoriesM)
+    console.log(difficultiesM)
     
     const skillsM = generateSAT2023PT3Skills(
       categoriesM,
       difficultiesM
     )
+    console.log(skillsM)
 
-    const bronzepercentrw = 0
-    const silverpercentrw = 0
-    const goldpercentrw = 0
+    let bronzepercentrw = 0
+    let silverpercentrw = 0
+    let goldpercentrw = 0
 
     //mastery percentages for difficulties reading
     if(Rwrongcounter >= 12){
@@ -196,10 +202,10 @@ const useGrade = () => {
       skillsM,
     }
 
-
     //
 
     const testData = {
+      test: 'SAT Diagnostic',
       studentName,
       date,
       readingRight,
@@ -302,7 +308,7 @@ const useGrade = () => {
         case 'Rhetorical Synthesis':
           rhetorical+=value
           break;
-        case 'Command of Quantiative Evidence':
+        case 'Command of Quantitative Evidence':
           commandofquant+=value
           break;
         case 'One-Variable Equations':
@@ -317,7 +323,7 @@ const useGrade = () => {
         case 'Building Linear Functions':
           buildinglinear+=value
           break;
-        case 'Creating one-variable equations':
+        case 'Creating One-Variable Equations':
           creatingone+=value
           break;
         case 'Linear Inequalities':

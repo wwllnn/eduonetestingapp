@@ -1798,7 +1798,7 @@ export const SAT2023PT3MM2AQ = {
 export const SAT2023PT3MM2ABD = {
   77: {
       contentdomain: 'Problem Solving and Data Analysis',
-      skill: 'Ratio, Rates and Proportions',
+      skill: 'Ratios, Rates and Proportions',
       difficulty: 'Bronze'
   },
   78: {

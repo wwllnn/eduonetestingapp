@@ -104,7 +104,7 @@ const Test = ({testnumber}) => {
   const handleSaveandChangeRW1 = () => {
     //grades current module
     const numCorrect = gradeModule(currentAnswers, currentTest)
-    if(numCorrect >= 15){
+    if(numCorrect >= 12){
       setCurrentTest(SAT2023PT3RWM2BQ)
       setCurrentQuestion(SAT2023PT3RWM2BQ[28])
       setQuestionNumber(28)
@@ -134,11 +134,11 @@ const Test = ({testnumber}) => {
   const handleSaveandChangeMath = () => {
     //grades current module
     const numCorrect = gradeModule(currentAnswers, currentTest)
-    if(numCorrect >= 15){
+    if(numCorrect >= 12){
       setCurrentTest(SAT2023PT3MM2BQ)
       setCurrentQuestion(SAT2023PT3MM2BQ[77])
       setQuestionNumber(77)
-    } else if (numCorrect < 15){
+    } else if (numCorrect < 12){
       setCurrentTest(SAT2023PT3MM2AQ)
       setCurrentQuestion(SAT2023PT3MM2AQ[77])
       setQuestionNumber(77)

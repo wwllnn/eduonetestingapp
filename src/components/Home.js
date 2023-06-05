@@ -62,6 +62,33 @@ const Home = () => {
     //const hello = prepDataSAT3(i.currentAnswers, i.studentName, i.date)
     //console.log(hello)
   }
+
+  const clicktest = (i) => {
+    console.log(i)
+    let sumM = 0
+    let sumMd = 0
+    Object.entries(i.skillsObject.skillsM.skills).forEach(([key, value], index) => {
+      console.log('key ' + key + ' value ' + value)
+      sumM += parseInt(value)
+    })
+    Object.entries(i.skillsObject.skillsM.levels).forEach(([key, value], index) => {
+      sumMd += parseInt(value)
+    })
+    console.log(sumM)
+    console.log(sumMd)
+
+    let sumR = 0
+    let sumRd = 0
+    Object.entries(i.skillsObject.skillsRW.skills).forEach(([key, value], index) => {
+      sumR += parseInt(value)
+    })
+    Object.entries(i.skillsObject.skillsRW.levels).forEach(([key, value], index) => {
+      sumRd += parseInt(value)
+    })
+    console.log(sumR)
+
+    console.log(sumRd)
+  }
   
   return (
     <div className='home'>
@@ -76,10 +103,12 @@ const Home = () => {
           </div>
           <div className='home-inner-right'>
             <div className='home-title'>
-              You've completed this test on
+              You've taken the diagnostic on
             </div>
             {unfinishedtests.documents && unfinishedtests.documents.map((i, t) => {
-              return <div className='home-test' key={t}>{unfinishedtests.documents[t].date}</div>
+              return <div className='home-test'>
+                  <div key={t} onClick={() => clicktest(i)}>{unfinishedtests.documents[t].date}</div>
+              </div>
             })}
           </div>
         </div>
@@ -87,7 +116,7 @@ const Home = () => {
         {
           user.email.includes('educate-one') && students && students.documents &&
           <div>
-            <div className='student-list-header'> Students</div>
+            <div className='student-list-header'>Students</div>
             <div className='student-list'>
               {Object.entries(students.documents).map((i, n) => {
                 if(!i[1].email.includes('educate-one.com')){
