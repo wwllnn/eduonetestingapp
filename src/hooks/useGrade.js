@@ -23,11 +23,14 @@ const useGrade = () => {
 
   const prepDataSAT3 = (currentAnswers, studentName, date) => {
 
+    //for module change
     let Rwrongcounter = 0
     let Mwrongcounter = 0
 
+    //total wrong
     let readingwrong = 0
     let mathwrong = 0
+
     let totalright = 0
     let totalwrong = 0
     let categoriesRW = {}
@@ -111,15 +114,6 @@ const useGrade = () => {
       }
     }
 
-    /*
-    console.log(categoriesRW)
-    console.log(difficultiesRW)
-    console.log(categoriesM)
-    console.log(difficultiesM)
-
-    console.log(totalwrong)
-    console.log(totalright)
-    */
 
     //calculated scores
     const readingRight = 54 - readingwrong
@@ -131,7 +125,7 @@ const useGrade = () => {
     //math
     //rx
     const readingScore = 1600 - (readingwrong * 25)
-    const mathScore = 1600 - (mathwrong * 35)
+    const mathScore = 1600 - (mathwrong * 30)
     const compositeScore = readingScore + mathScore
 
     //composite
@@ -147,38 +141,29 @@ const useGrade = () => {
 
     //skill mastery reading
     //rxhours reading
-    console.log(categoriesRW)
     const skillsRW = generateSAT2023PT3Skills(
       categoriesRW, 
       difficultiesRW
     )
-    console.log(skillsRW)
-
-    console.log(categoriesRW)
-    console.log(difficultiesRW)
-
-    console.log(categoriesM)
-    console.log(difficultiesM)
     
     const skillsM = generateSAT2023PT3Skills(
       categoriesM,
       difficultiesM
     )
-    console.log(skillsM)
 
     let bronzepercentrw = 0
     let silverpercentrw = 0
     let goldpercentrw = 0
 
     //mastery percentages for difficulties reading
-    if(Rwrongcounter >= 12){
+    if(Rwrongcounter > 12){
       bronzepercentrw = 100 - Math.round(skillsRW.levels['Bronze'] / 30 * 100)
       silverpercentrw = 100 - Math.round(skillsRW.levels['Silver'] / 22 * 100)
       goldpercentrw = 100 - Math.round(skillsRW.levels['Gold'] / 2 * 100)
     } else {
       bronzepercentrw = 100 - Math.round(skillsRW.levels['Bronze'] / 17 * 100)
       silverpercentrw = 100 -Math.round(skillsRW.levels['Silver'] / 29 * 100)
-      goldpercentrw = 100 - Math.round(skillsRW.levels['Gold'] / 6 * 100)
+      goldpercentrw = 100 - Math.round(skillsRW.levels['Gold'] / 8 * 100)
     }
 
     let bronzepercentm = 0
@@ -186,7 +171,7 @@ const useGrade = () => {
     let goldpercentm = 0
 
     //get cate percentages for math
-    if(Mwrongcounter >= 10){
+    if(Mwrongcounter > 10){
       bronzepercentm = 100 - Math.round(skillsM.levels.Bronze / 28 * 100)
       silverpercentm = 100 - Math.round(skillsM.levels.Silver / 14 * 100)
       goldpercentm = 100 - Math.round(skillsM.levels.Gold / 2 * 100)
@@ -196,13 +181,22 @@ const useGrade = () => {
       goldpercentm = 100 - Math.round(skillsM.levels.Gold / 3 * 100)
     }
 
+    const difficultyPercents = {
+      bronzepercentrw,
+      silverpercentrw,
+      goldpercentrw,
+      bronzepercentm,
+      silverpercentm,
+      goldpercentm
+    }
+
 
     const skillsObject = {
       skillsRW,
       skillsM,
     }
 
-    //
+    const percentsObject = generatePercentsSAT3(Rwrongcounter, Mwrongcounter, skillsRW, skillsM)
 
     const testData = {
       test: 'SAT Diagnostic',
@@ -216,12 +210,224 @@ const useGrade = () => {
       readingRXadditional,
       mathRXadditional,
       totalRXadditional,
-      skillsObject
+      skillsObject,
+      difficultyPercents,
+      percentsObject
     }
 
     console.log(testData)
 
     return testData
+  }
+
+  const generatePercentsSAT3 = (Rwrongcounter, Mwrongcounter, skillsRW, skillsM) => {
+    //get skill percentages for reading
+
+    let wordsincontextp = 0
+    let textstructureandpurposep = 0
+    let crosstextp = 0
+    let centralideasp = 0
+    let commandquantp = 0
+    let commandoftextualp = 0
+    let formstructurep = 0
+    let boundariesp = 0
+    let transitionsp = 0
+    let inferencesp = 0
+    let rhetoricalsynthesisp = 0
+
+    
+    if(Rwrongcounter > 12){
+      //easy verison
+      wordsincontextp = 100 - Math.round(skillsRW.skills['Words in Context'] / 11 * 100)
+      textstructureandpurposep = 100 - Math.round(skillsRW.skills['Text Structure and Purpose'] / 3 * 100)
+      crosstextp = 100 - Math.round(skillsRW.skills['Cross-Text Connections'] / 1 * 100)
+      centralideasp = 100 - Math.round(skillsRW.skills['Central Ideas and Details'] / 5 * 100)
+      commandquantp = 100 - Math.round(skillsRW.skills['Command of Quantitative Evidence'] / 3 * 100)
+      commandoftextualp = 100 - Math.round(skillsRW.skills['Command of Textual Evidence'] / 4 * 100)
+      formstructurep = 100 - Math.round(skillsRW.skills['Form Structure and Sense'] / 7 * 100)
+      boundariesp = 100 - Math.round(skillsRW.skills['Boundaries'] / 6 * 100)
+      transitionsp = 100 - Math.round(skillsRW.skills['Transitions'] / 5 * 100)
+      rhetoricalsynthesisp = 100 - Math.round(skillsRW.skills['Rhetorical Synthesis'] / 6 * 100)
+      inferencesp = 100 - Math.round(skillsRW.skills['Inferences'] / 3 * 100)
+    } else if (Rwrongcounter <= 12) {
+      //rw module 2b
+      wordsincontextp = 100 - Math.round(skillsRW.skills['Words in Context'] / 10 * 100)
+      textstructureandpurposep = 100 - Math.round(skillsRW.skills['Text Structure and Purpose'] / 3 * 100)
+      crosstextp = 100 - Math.round(skillsRW.skills['Cross-Text Connections'] / 1 * 100)
+      centralideasp = 100 - Math.round(skillsRW.skills['Central Ideas and Details'] / 4 * 100)
+      commandquantp = 100 - Math.round(skillsRW.skills['Command of Quantitative Evidence'] / 3 * 100) 
+      commandoftextualp = 100 - Math.round(skillsRW.skills['Command of Textual Evidence'] / 4 * 100)
+      formstructurep = 100 - Math.round(skillsRW.skills['Form Structure and Sense'] / 4 * 100)
+      boundariesp = 100 - Math.round(skillsRW.skills['Boundaries'] / 8 * 100)
+      transitionsp = 100 - Math.round(skillsRW.skills['Transitions'] / 4 * 100)
+      rhetoricalsynthesisp = 100 - Math.round(skillsRW.skills['Rhetorical Synthesis'] / 8 * 100)
+      inferencesp = 100 - Math.round(skillsRW.skills['Inferences'] / 4 * 100)
+    }
+
+
+    let onevariablep = 0
+    let interpretlinp = 0
+    let systemslinp = 0
+    let buildinglinp = 0
+    let expresscontextp = 0 
+    let rationalexpressp = 0
+    let createquadp = 0
+    let systemsquadp = 0
+    let algebrexpressp = 0
+    let solvingquadp = 0
+    let ratiosp = 0
+    let linearvsp = 0
+    let statsp = 0
+    let scatterp = 0
+    let trianglesp = 0
+    let circlearcsp = 0
+    let creatingonep = 0
+    let linearinequalp = 0
+    let graphinglinearp = 0
+    let graphingnonlinearp = 0
+    let functionnotationp = 0
+    let shapesp = 0 
+    let trigratiosp = 0 
+    let volumep = 0
+    let rationalexpop = 0
+
+    //get skill percentages for math
+    if(Mwrongcounter > 12){
+      //easy version
+      algebrexpressp = 100 - Math.round(skillsM.skills['Algebraic Expressions'] / 2 * 100)
+      buildinglinp = 100 - Math.round(skillsM.skills['Building Linear Functions'] / 3 * 100)
+      circlearcsp = 100 - Math.round(skillsM.skills['Circle Arcs, Angles and Chords'] * 100)
+      createquadp = 100 - Math.round(skillsM.skills['Creating Quadratic and Exponential Functions'] / 3 * 100)
+      creatingonep = 100 - Math.round(skillsM.skills['Creating One-Variable Equations'] * 100)
+      expresscontextp = 100 - Math.round(skillsM.skills['Expressions and Equations in Context'] * 100)
+      functionnotationp = 100 - Math.round(skillsM.skills['Function Notation'] * 100)
+      graphinglinearp = 100 - Math.round(skillsM.skills['Graphing Linear Relationships'] * 100)
+      graphingnonlinearp = 100 - Math.round(skillsM.skills['Graphing Nonlinear Functions'] * 100)
+      interpretlinp = 100 - Math.round(skillsM.skills['Interpreting Linear Functions'] / 2 * 100)
+      linearinequalp = 100 - Math.round(skillsM.skills['Linear Inequalities'] / 2 * 100)
+      linearvsp = 100 - Math.round(skillsM.skills['Linear vs. Exponential Growth'] * 100)
+      onevariablep = 100 - Math.round(skillsM.skills['One-Variable Equations']  / 5 * 100)
+      rationalexpressp = 100 - Math.round(skillsM.skills['Rational Expressions and Equations'] / 2 * 100)
+      ratiosp = 100 - Math.round(skillsM.skills['Ratios, Rates and Proportions'] / 2 * 100)
+      scatterp = 100 - Math.round(skillsM.skills['Scatterplots and Graphs'] / 3 * 100)
+      shapesp = 100 - Math.round(skillsM.skills['2D Shapes'] / 2 * 100)
+      solvingquadp = 100 - Math.round(skillsM.skills['Solving Quadratic Equations'] / 3 * 100)
+      statsp = 100 - Math.round(skillsM.skills['Statistics - Shape, Center, Spread'] / 2 * 100)
+      systemslinp = 100 - Math.round(skillsM.skills['Systems of Linear Equations'] / 2 * 100)
+      systemsquadp = 100 - Math.round(skillsM.skills['Systems of Quadratic and Linear Functions'] * 100)
+      trianglesp = 100 - Math.round(skillsM.skills['Triangles, Lines and Angles'] / 3 * 100)
+    } else if (Mwrongcounter <= 12){
+      //hard version
+      algebrexpressp = 100 - Math.round(skillsM.skills['Algebraic Expressions'] * 100)
+      buildinglinp = 100 - Math.round(skillsM.skills['Building Linear Functions'] / 3 * 100)
+      createquadp = 100 - Math.round(skillsM.skills['Creating Quadratic and Exponential Functions'] / 4 * 100)
+      expresscontextp = 100 - Math.round(skillsM.skills['Expressions and Equations in Context'] * 100)
+      interpretlinp = 100 - Math.round(skillsM.skills['Interpreting Linear Functions'] / 2 * 100)
+      linearinequalp = 100 - Math.round(skillsM.skills['Linear Inequalities'] / 2 * 100)
+      linearvsp = 100 - Math.round(skillsM.skills['Linear vs. Exponential Growth'] * 100)
+      onevariablep = 100 - Math.round(skillsM.skills['One-Variable Equations'] / 5 * 100)
+      rationalexpop = 100 - Math.round(skillsM.skills['Rational Exponents and Radicals'] / 2 * 100)
+      rationalexpressp = 100 - Math.round(skillsM.skills['Rational Expressions and Equations'] / 3 * 100)
+      ratiosp = 100 - Math.round(skillsM.skills['Ratios, Rates and Proportions'] / 2 * 100)
+      scatterp = 100 - Math.round(skillsM.skills['Scatterplots and Graphs'] * 100)
+      solvingquadp = 100 - Math.round(skillsM.skills['Solving Quadratic Equations'] / 5 * 100)
+      statsp = 100 - Math.round(skillsM.skills['Statistics - Shape, Center, Spread'] / 3 * 100)
+      systemslinp = 100 - Math.round(skillsM.skills['Systems of Linear Equations'] / 3 * 100)
+      systemsquadp = 100 - Math.round(skillsM.skills['Systems of Quadratic and Linear Functions'] * 100)
+      trianglesp = 100 - Math.round(skillsM.skills['Triangles, Lines and Angles'] / 3 * 100)
+      trigratiosp = 100 - Math.round(skillsM.skills['Trig. Ratios and Pythagorean Thm.'] * 100)
+      volumep = 100 - Math.round(skillsM.skills['Volume'] * 100)
+    }
+
+    const categoryPercentages = {
+      readingP: {
+        wordsincontextp,
+        textstructureandpurposep,
+        crosstextp,
+        centralideasp,
+        commandquantp,
+        commandoftextualp,
+        formstructurep,
+        boundariesp,
+        transitionsp,
+        inferencesp,
+        rhetoricalsynthesisp,
+      },
+      mathP: {
+        onevariablep,
+        interpretlinp,
+        systemslinp,
+        buildinglinp,
+        expresscontextp,
+        rationalexpressp,
+        createquadp,
+        systemsquadp,
+        algebrexpressp,
+        solvingquadp,
+        ratiosp,
+        linearvsp,
+        statsp,
+        scatterp,
+        trianglesp,
+        circlearcsp,
+        creatingonep,
+        linearinequalp,
+        graphinglinearp,
+        graphingnonlinearp,
+        functionnotationp,
+        shapesp,
+        trigratiosp,
+        volumep,
+        rationalexpop
+      }
+    }
+
+    const skillsArrayRW = Object.entries(skillsRW.skills) 
+    const skillsArrayM = Object.entries(skillsM.skills)
+
+
+    let rxTotalRW = skillsArrayRW.reduce(function(sum, value) {
+      return sum + value[1];
+    }, 0)
+
+    rxTotalRW*=10
+    if(rxTotalRW > 275){
+      rxTotalRW = 275
+    }
+
+    let rxTotalM = skillsArrayM.reduce(function(sum, value) {
+      return sum + value[1];
+    }, 0);
+
+    rxTotalM*=10
+    if(rxTotalM > 255){
+      rxTotalM = 255
+    }
+
+    let rxHoursRW = {}
+    let rxHoursM = {}
+
+    skillsArrayRW.forEach(e=>rxHoursRW[e[0]] = (e[1] * 10))
+    skillsArrayM.forEach(e=>rxHoursM[e[0]] = (e[1] * 10))
+
+    const rxTotal = rxTotalRW + rxTotalM
+    
+
+    const skillsObject = {
+      skillsRW,
+      skillsM,
+      categoryPercentages,
+      rxHoursRW,
+      rxHoursM,
+      rxTotalRW,
+      rxTotalM,
+      rxTotal
+    }
+    
+    return {
+      skillsObject
+    }
+
   }
 
   const generateSAT2023PT3Skills = (categories, difficulties) => {

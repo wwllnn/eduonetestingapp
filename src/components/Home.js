@@ -49,8 +49,6 @@ const Home = () => {
   }, [currentStudent])
 
   const handleStudentClick = (i) => {
-    console.log(i[1].name)
-    console.log(i[1].id)
     setCurrentStudent(i[1])
   }
 
@@ -68,14 +66,11 @@ const Home = () => {
     let sumM = 0
     let sumMd = 0
     Object.entries(i.skillsObject.skillsM.skills).forEach(([key, value], index) => {
-      console.log('key ' + key + ' value ' + value)
       sumM += parseInt(value)
     })
     Object.entries(i.skillsObject.skillsM.levels).forEach(([key, value], index) => {
       sumMd += parseInt(value)
     })
-    console.log(sumM)
-    console.log(sumMd)
 
     let sumR = 0
     let sumRd = 0
@@ -85,14 +80,10 @@ const Home = () => {
     Object.entries(i.skillsObject.skillsRW.levels).forEach(([key, value], index) => {
       sumRd += parseInt(value)
     })
-    console.log(sumR)
-
-    console.log(sumRd)
   }
   
   return (
     <div className='home'>
-      
       {!user.email.includes('educate-one') && 
         <div className='home-inner'>
           <div>
@@ -127,15 +118,14 @@ const Home = () => {
           </div>
         }
         <div className='tests-container'>
-        {
-          currentStudent && <div className='tests-list-header'>{currentStudent.name}</div>
-        }
-        {
-        currentStudent && tests && tests.documents && Object.entries(tests.documents).map((t, i) => {
-           return <div key={i} onClick={() => gradeTestClick(t[1])}>{t[1].date}</div>
-        })
-        }
-
+          {
+            currentStudent && <div className='tests-list-header'>{currentStudent.name}</div>
+          }
+          {
+            currentStudent && tests && tests.documents && Object.entries(tests.documents).map((t, i) => {
+              return <div key={i} onClick={() => gradeTestClick(t[1])}>{t[1].date}</div>
+            })
+          }
         </div>
     </div>
   )

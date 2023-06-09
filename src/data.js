@@ -306,13 +306,13 @@ export const SAT2023PT3RWM1BD = {
   },
   6:{
       contentdomain: 'Craft and Structure',
-      skill: 'Words in Context',
+      skill: 'Text Structure and Purpose',
       difficulty: 'Gold',
       answer:'d'
   },
   7:{
       contentdomain: 'Information and Ideas',
-      skill: 'Central Ideas and Purpose',
+      skill: 'Central Ideas and Details',
       difficulty: 'Silver',
       answer:'a'
   },
@@ -434,7 +434,7 @@ export const SAT2023PT3RWM1BD = {
   27:{
       contentdomain: 'Expression of Ideas',
       skill: 'Rhetorical Synthesis',
-      difficulty: 'Silver',
+      difficulty: 'Bronze',
       answer:'c'
   }
 }
