@@ -111,7 +111,7 @@ const Home = () => {
             <div className='student-list'>
               {Object.entries(students.documents).map((i, n) => {
                 if(!i[1].email.includes('educate-one.com')){
-                  return <div className='student-entry' key={n} onClick={() => handleStudentClick(i)}>{i[1].name}                </div>
+                  return <div className='student-entry' key={n} onClick={() => handleStudentClick(i)}>{i[1].name} </div>
                 }
               })}
             </div>
@@ -121,9 +121,14 @@ const Home = () => {
           {
             currentStudent && <div className='tests-list-header'>{currentStudent.name}</div>
           }
+
           {
             currentStudent && tests && tests.documents && Object.entries(tests.documents).map((t, i) => {
-              return <div key={i} onClick={() => gradeTestClick(t[1])}>{t[1].date}</div>
+              if(t[1].compositeScore){
+                return <PDFDownloadLink className='link' document={<TestPrint info={t[1]}/>} key={i}>
+                  {({loading}) => (loading ? <button>Loading</button> : <button className='student-entry'>{t[1].date}</button>)}
+                </PDFDownloadLink>      
+              }
             })
           }
         </div>

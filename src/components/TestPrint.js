@@ -51,6 +51,7 @@ Font.register({
 })
 
 const TestPrint = ({ info }) => {
+  console.log(info)
 
   return (
     <Document>
@@ -98,12 +99,12 @@ const TestPrint = ({ info }) => {
 
         <View style={{display: 'flex', flexDirection: 'row', padding: 5, marginLeft: 100}}>
           <View style={{flex: 1, textAlign: 'center', fontFamily: 'IBM Plex Sans-SemiBold', fontSize: 12, flexDirection: 'row'}}>
-            <Text style={{color: 'maroon'}}>{info.readingRight}</Text>
+            <Text style={{color: 'maroon', marginLeft: '5px'}}>{info.readingRight}</Text>
             <Text>/54</Text>
           </View>
 
           <View style={{flex: 1, fontFamily: 'IBM Plex Sans-SemiBold', fontSize: 12, flexDirection: 'row', marginLeft: 110}}>
-            <Text style={{color: 'maroon'}}>{info.MathRight}</Text>
+            <Text style={{color: 'maroon', marginLeft: '5px'}}>{info.mathRight}</Text>
             <Text>/44</Text>
           </View>
         </View>
@@ -167,17 +168,17 @@ const TestPrint = ({ info }) => {
           </View>
           <View style={styles.sectionrowdiffbronze}>
             <Text style={{flexGrow: 1, fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>Level 1</Text>
-            <Text style={{fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.difficultyPercentages.bronzepercentrw}%</Text>
+            <Text style={{fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.difficultyPercents.bronzepercentrw}%</Text>
           </View>
 
           <View style={styles.sectionrowdiffsilver}>
             <Text style={{flexGrow: 1,fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>Level 2</Text>
-            <Text style={{fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.difficultyPercentages.silverpercentrw}%</Text>
+            <Text style={{fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.difficultyPercents.silverpercentrw}%</Text>
           </View>
 
           <View style={styles.sectionrowdiffgold}>
             <Text style={{flexGrow: 1, fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>Level 3</Text>
-            <Text style={{fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.difficultyPercentages.goldpercentrw}%</Text>
+            <Text style={{fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.difficultyPercents.goldpercentrw}%</Text>
           </View>
         </View>
 
@@ -202,10 +203,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Words in Context</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.readingP.wordsincontextp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.readingP.wordsincontextp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursRW['Words in Context']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsRW.skills['Words in Context']}</Text>
             </View>
         </View>
 
@@ -214,10 +215,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Text Structure and Purpose</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.readingP.textstructureandpurposep}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.readingP.textstructureandpurposep}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursRW['Text Structure and Purpose']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsRW.skills['Text Structure and Purpose']}</Text>
             </View>
         </View>
 
@@ -226,10 +227,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Cross-Text Connections</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.readingP.crosstextp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.readingP.crosstextp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursRW['Cross-Text Connections']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsRW.skills['Cross-Text Connections']}</Text>
             </View>
         </View>
 
@@ -242,10 +243,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Central Ideas and Details</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.readingP.centralideasp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.readingP.centralideasp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursRW['Central Ideas and Details']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsRW.skills['Central Ideas and Details']}</Text>
             </View>
         </View>
 
@@ -254,10 +255,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Using Textual Evidence</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.readingP.commandoftextualp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.readingP.commandoftextualp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursRW['Command of Textual Evidence']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsRW.skills['Command of Textual Evidence']}</Text>
             </View>
         </View>
 
@@ -266,10 +267,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Using Quantitative Evidence</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.readingP.commandquantp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.readingP.commandquantp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursRW['Command of Quantitative Evidence']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsRW.skills['Command of Quantitative Evidence']}</Text>
             </View>
         </View>
 
@@ -278,10 +279,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Inferences</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.readingP.inferencesp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.readingP.inferencesp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursRW['Inferences']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsRW.skills['Inferences']}</Text>
             </View>
         </View>
 
@@ -294,10 +295,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Boundaries</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.readingP.boundariesp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.readingP.boundariesp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursRW['Boundaries']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsRW.skills['Boundaries']}</Text>
             </View>
         </View>
 
@@ -306,10 +307,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Form, Structure, and Sense</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.readingP.formstructurep}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.readingP.formstructurep}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursRW['Form Structure and Sense']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsRW.skills['Form Structure and Sense']}</Text>
             </View>
         </View>
 
@@ -322,10 +323,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Rhetorical Synthesis</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.readingP.rhetoricalsynthesisp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.readingP.rhetoricalsynthesisp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursRW['Rhetorical Synthesis']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsRW.skills['Rhetorical Synthesis']}</Text>
             </View>
         </View>
 
@@ -334,10 +335,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Transitions</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.readingP.transitionsp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.readingP.transitionsp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursRW['Transitions']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsRW.skills['Transitions']}</Text>
             </View>
         </View>
 
@@ -349,7 +350,7 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 13, fontFamily: 'IBM Plex Sans-SemiBold'}}></Text>
             </View>
             <View style={{flex: 1, borderTop: '1px solid black', borderRight: '1px solid black', borderBottom: '1px solid black', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 13, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxTotalRW}</Text>
+              <Text style={{fontSize: 13, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.readingRXadditional}</Text>
             </View>
         </View>
         
@@ -388,17 +389,17 @@ const TestPrint = ({ info }) => {
           </View>
           <View style={styles.sectionrowdiffbronze}>
             <Text style={{flexGrow: 1, fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>Level 1</Text>
-            <Text style={{fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.difficultyPercentages.bronzepercentm}%</Text>
+            <Text style={{fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.difficultyPercents.bronzepercentm}%</Text>
           </View>
 
           <View style={styles.sectionrowdiffsilver}>
             <Text style={{flexGrow: 1,fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>Level 2</Text>
-            <Text style={{fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.difficultyPercentages.silverpercentm}%</Text>
+            <Text style={{fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.difficultyPercents.silverpercentm}%</Text>
           </View>
 
           <View style={styles.sectionrowdiffgold}>
             <Text style={{flexGrow: 1, fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>Level 3</Text>
-            <Text style={{fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.difficultyPercentages.goldpercentm}%</Text>
+            <Text style={{fontSize: 11, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.difficultyPercents.goldpercentm}%</Text>
           </View>
         </View>
 
@@ -423,10 +424,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>One-Variable Equations</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.onevariablep}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.onevariablep}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['One-Variable Equations']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['One-Variable Equations']}</Text>
             </View>
         </View>
 
@@ -435,10 +436,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Interpreting Linear Functions</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.interpretlinp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.interpretlinp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Interpreting Linear Functions']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Interpreting Linear Functions']}</Text>
             </View>
         </View>
 
@@ -447,10 +448,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Systems of Linear Equations</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.systemslinp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.systemslinp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Systems of Linear Equations']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Systems of Linear Equations']}</Text>
             </View>
         </View>
 
@@ -459,10 +460,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Building Linear Functions</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.buildinglinp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.buildinglinp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Building Linear Functions']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Building Linear Functions']}</Text>
             </View>
         </View>
 
@@ -471,10 +472,10 @@ const TestPrint = ({ info }) => {
             <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Creating One-Variable Eqns.</Text>
           </View>
           <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-            <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.creatingonep}%</Text>
+            <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.creatingonep}%</Text>
           </View>
           <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-            <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Creating One-Variable Equations']}</Text>
+            <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Creating One-Variable Equations']}</Text>
           </View>
         </View>
 
@@ -483,10 +484,10 @@ const TestPrint = ({ info }) => {
             <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Linear Inequalities</Text>
           </View>
           <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-            <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.linearinequalp}%</Text>
+            <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.linearinequalp}%</Text>
           </View>
           <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-            <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Linear Inequalities']}</Text>
+            <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Linear Inequalities']}</Text>
           </View>
         </View>
 
@@ -495,10 +496,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Graphing Linear Relationships</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.graphinglinearp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.graphinglinearp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Graphing Linear Relationships']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Graphing Linear Relationships']}</Text>
             </View>
         </View>
 
@@ -511,10 +512,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Expressions in Context</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.expresscontextp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.expresscontextp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Expressions and Equations in Context']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Expressions and Equations in Context']}</Text>
             </View>
         </View>
 
@@ -523,10 +524,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Rational Expressions</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.rationalexpressp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.rationalexpressp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Rational Expressions and Equations']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Rational Expressions and Equations']}</Text>
             </View>
         </View>
 
@@ -535,10 +536,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Rational Exponents</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.rationalexpop}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.rationalexpop}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Rational Exponents and Radicals']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Rational Exponents and Radicals']}</Text>
             </View>
         </View>
 
@@ -547,10 +548,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Graphing Nonlinear Functions</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.graphingnonlinearp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.graphingnonlinearp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Graphing Nonlinear Functions']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Graphing Nonlinear Functions']}</Text>
             </View>
         </View>
 
@@ -559,10 +560,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Creating Exponential Functions</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.createquadp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.createquadp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Creating Quadratic and Exponential Functions']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Creating Quadratic and Exponential Functions']}</Text>
             </View>
         </View>
 
@@ -571,10 +572,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Systems of Quad. & Lin. Funcs.</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.systemsquadp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.systemsquadp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Systems of Quadratic and Linear Functions']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Systems of Quadratic and Linear Functions']}</Text>
             </View>
         </View>
 
@@ -583,10 +584,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Algebraic Expressions</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.algebrexpressp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.algebrexpressp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Algebraic Expressions']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Algebraic Expressions']}</Text>
             </View>
         </View>
 
@@ -595,10 +596,10 @@ const TestPrint = ({ info }) => {
             <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Function Notation</Text>
           </View>
           <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-            <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.functionnotationp}%</Text>
+            <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.functionnotationp}%</Text>
           </View>
           <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-            <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Function Notation']}</Text>
+            <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Function Notation']}</Text>
           </View>
         </View>
 
@@ -607,10 +608,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Solving Quadratic Equations</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.solvingquadp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.solvingquadp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Solving Quadratic Equations']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Solving Quadratic Equations']}</Text>
             </View>
         </View>
 
@@ -649,10 +650,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Ratios, Rates and Proportions</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.ratiosp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.ratiosp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Ratios, Rates and Proportions']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Ratios, Rates and Proportions']}</Text>
             </View>
         </View>
 
@@ -661,10 +662,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Linear vs. Exponential Growth</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.linearvsp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.linearvsp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Linear vs. Exponential Growth']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Linear vs. Exponential Growth']}</Text>
             </View>
         </View>
 
@@ -673,10 +674,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Statistics - Shape, Center, Spread</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.statsp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.statsp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Statistics - Shape, Center, Spread']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Statistics - Shape, Center, Spread']}</Text>
             </View>
         </View>
 
@@ -685,10 +686,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Scatterplots and Graphs</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.scatterp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.scatterp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Scatterplots and Graphs']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Scatterplots and Graphs']}</Text>
             </View>
         </View>
 
@@ -701,10 +702,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>2D Shapes</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.shapesp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.shapesp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['2D Shapes']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['2D Shapes']}</Text>
             </View>
         </View>
 
@@ -713,10 +714,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Triangles, Lines and Angles</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.trianglesp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.trianglesp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Triangles, Lines and Angles']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Triangles, Lines and Angles']}</Text>
             </View>
         </View>
 
@@ -725,10 +726,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Volume</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.volumep}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.volumep}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Volume']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Volume']}</Text>
             </View>
         </View>
 
@@ -737,10 +738,10 @@ const TestPrint = ({ info }) => {
               <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Trig. Ratios/Pythag. Theorem </Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.trigratiosp}%</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.trigratiosp}%</Text>
             </View>
             <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Trig. Ratios and Pythagorean Thm.']}</Text>
+              <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Trig. Ratios and Pythagorean Thm.']}</Text>
             </View>
         </View>
 
@@ -749,10 +750,10 @@ const TestPrint = ({ info }) => {
             <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>Circle Arcs, Angles and Chords</Text>
           </View>
           <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-            <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.categoryPercentages.mathP.circlearcsp}%</Text>
+            <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsPercents.mathP.circlearcsp}%</Text>
           </View>
           <View style={{flex: 1, border: '1px solid lightgray', marginLeft: '-1px', padding: 5, alignItems: 'center', justifyContent: 'center'}}>
-            <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.categories.rxHoursM['Circle Arcs, Angles and Chords']}</Text>
+            <Text style={{fontSize: 10, fontFamily: 'IBM Plex Sans-SemiBold'}}>{info.skillsObject.skillsM.skills['Circle Arcs, Angles and Chords']}</Text>
           </View>
         </View>
 

@@ -29,6 +29,7 @@ const Test = ({testnumber}) => {
   const [questionNumber, setQuestionNumber] = useState(1)
   const [currentQuestion, setCurrentQuestion] = useState('')
   const [selected, setSelected] = useState()
+  const [currentInput, setCurrentInput] = useState('')
   const [nextModal, setNextModal] = useState(false)
   const [mathModal, setMathModal] = useState(false)
   const [mathModal2, setMathModal2] = useState(false)
@@ -59,28 +60,22 @@ const Test = ({testnumber}) => {
   //on click for nav, changes the question number and the question state
   const changeQuestion = (num) => {
     setQuestionNumber(num)
+    
     setSelected(currentAnswers[num])
-    if(testnumber === 3){
-      setCurrentQuestion(currentTest[num])
-    }
-  
-    if(testnumber === 4){
-      setCurrentQuestion(currentTest[num])
-    }
+    setCurrentInput(currentAnswers[num])
+
+    setCurrentQuestion(currentTest[num])
   }
 
   //on click of the next button, increments the question number and changes the question state
   const nextQuestion = (num) => {
     num++
     setQuestionNumber(num)
+
     setSelected(currentAnswers[num])
-    if(testnumber === 3){
-      setCurrentQuestion(currentTest[num])
-    }
-  
-    if(testnumber === 4){
-      setCurrentQuestion(currentTest[num])
-    }
+    setCurrentInput(currentAnswers[num])
+
+    setCurrentQuestion(currentTest[num])
   }
 
   //set modal true to next module of r/w
@@ -242,6 +237,9 @@ const Test = ({testnumber}) => {
           questionNumber={questionNumber} 
           setSelected={setSelected}
           selected={selected}
+
+          setCurrentInput={setCurrentInput}
+          currentInput={currentInput}
         />
       </div>
       <div className='test-right'>

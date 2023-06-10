@@ -20,10 +20,12 @@ const Question = ({
   moduleNumber,
   setSelected, 
   questionNumber, 
-  selected
+  selected,
+
+  setCurrentInput,
+  currentInput
 }) => {
 
-  const [currentInput, setCurrentInput] = useState('')
 
   const handleSelect = (letter) => {
     setSelected(letter)
@@ -31,11 +33,12 @@ const Question = ({
   }
 
   const handleInput = (i) => {
+    setCurrentInput(i)
     setCurrentAnswers({...currentAnswers, [questionNumber]:i})
-
   }
 
   console.log(currentAnswers)
+  console.log(currentInput)
 
   return (
     <div className='question'>
@@ -76,7 +79,7 @@ const Question = ({
             </div>
           </div>}
       {currentQuestion && currentQuestion.fr && 
-        <input onChange={(e) => handleInput(e.target.value)}></input>
+        <input value={currentInput ? currentInput : ''} onChange={(e) => handleInput(e.target.value)} />
       }
 
     </div>
