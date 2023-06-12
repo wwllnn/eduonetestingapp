@@ -6,11 +6,9 @@ import { useAuthContext } from '../hooks/useAuthContext'
 import { useFirestore } from '../hooks/useFirestore'
 import { useCollection } from '../hooks/useCollection'
 
-import { doc, getDoc } from "firebase/firestore";
 
 import { PDFDownloadLink } from "@react-pdf/renderer"
-import ScorePrint from "./ScorePrint"
-import useGrade from '../hooks/useGrade'
+
 import TestPrint from './TestPrint'
 
 
@@ -22,12 +20,9 @@ const Home = () => {
 
   const { user } = useAuthContext() 
 
-  const { setDocument, state } = useFirestore('students')
+  const { setDocument } = useFirestore('students')
 
-  const unfinishedtests = useCollection(`students/${user.uid}/tests`)
-
-  const { gradeSAT2023PT3, prepDataSAT3 } = useGrade()
-  
+  const unfinishedtests = useCollection(`students/${user.uid}/tests`)  
 
   const students = useCollection('students')
 
@@ -50,15 +45,6 @@ const Home = () => {
 
   const handleStudentClick = (i) => {
     setCurrentStudent(i[1])
-  }
-
-  const gradeTestClick = (i) => {
-    //useGrade()
-    console.log(i)
-    //console.log(i.date)
-    //console.log(i.studentName)
-    //const hello = prepDataSAT3(i.currentAnswers, i.studentName, i.date)
-    //console.log(hello)
   }
 
   const clicktest = (i) => {
@@ -88,17 +74,27 @@ const Home = () => {
         <div className='home-inner'>
           <div>
             <div className='home-title'>Start New Test</div>
-            <div className='home-test' onClick={() => handleTestClick('3')}>SAT Practice Test 3</div>
-            <div className='home-test'>SAT Practice Test 4</div>
+            <div className='home-test' onClick={() => handleTestClick('3')}>SAT Diagnostic 3</div>
+            <div className='home-test'>SAT Diagnostic 4</div>
             {openModal && <BeginTestModal test={currentTest} setCurrentTestID={setCurrentTestID} setOpenModal={setOpenModal} />}
           </div>
           <div className='home-inner-right'>
-            <div className='home-title'>
-              You've taken the diagnostic on
-            </div>
+            {
+              (unfinishedtests && unfinishedtests.documents && unfinishedtests.documents.length == 0) &&  
+              <div className='home-title'>
+                No completed tests
+              </div>
+            }
+            {
+              (unfinishedtests && unfinishedtests.documents && unfinishedtests.documents.length > 0) &&  
+              <div className='home-title'>
+                You've taken the diagnostic on
+              </div>
+            }
+
             {unfinishedtests.documents && unfinishedtests.documents.map((i, t) => {
-              return <div className='home-test'>
-                  <div key={t} onClick={() => clicktest(i)}>{unfinishedtests.documents[t].date}</div>
+              return <div className='home-test' key={t}>
+                  <div onClick={() => clicktest(i)}>{unfinishedtests.documents[t].date}</div>
               </div>
             })}
           </div>
@@ -121,7 +117,6 @@ const Home = () => {
           {
             currentStudent && <div className='tests-list-header'>{currentStudent.name}</div>
           }
-
           {
             currentStudent && tests && tests.documents && Object.entries(tests.documents).map((t, i) => {
               if(t[1].compositeScore){

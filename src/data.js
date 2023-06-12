@@ -150,7 +150,7 @@ I HEAR it is charged against me that I seek to destroy institutions; But really 
     answer: 'D'
   },
   17: {
-    passage: 'Professional American football player Fred Cox invented one of the world’s most popular toys. In the 1970s, he came up with the idea for the Nerf football, which ______blank of the harder and heavier regulation football.',
+    passage: 'Professional American football player Fred Cox invented one of the world’s most popular toys. In the 1970s, he came up with the idea for the Nerf football, which ______ of the harder and heavier regulation football.',
     question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
     choice1: 'were a smaller, foam version',
     choice2: 'are smaller, foam versions',
@@ -204,7 +204,7 @@ I HEAR it is charged against me that I seek to destroy institutions; But really 
     answer: 'D'
   },
   23:{
-    passage: 'Every chemical compound has a spectroscopic fingerprint, a pattern of reflected light unique to that compound. ______blank upon analyzing the light reflected by the bright regions on the surface of the dwarf planet Ceres, Maria Cristina De Sanctis of Rome’s National Institute of Astrophysics was able to determine that the regions contain large amounts of the compound sodium carbonate.',
+    passage: 'Every chemical compound has a spectroscopic fingerprint, a pattern of reflected light unique to that compound. ______ upon analyzing the light reflected by the bright regions on the surface of the dwarf planet Ceres, Maria Cristina De Sanctis of Rome’s National Institute of Astrophysics was able to determine that the regions contain large amounts of the compound sodium carbonate.',
     question: 'Which choice completes the text with the most logical transition?',
     choice1: 'Regardless,',
     choice2: 'Meanwhile,',
@@ -451,7 +451,7 @@ export const SAT2023PT3RWM2AQ = {
     answer: 'B'
   },
   29: {
-    passage: 'Particle physicists like Ayana Holloway Arce and Aida El-Khadra spend much of their time ______blank what is invisible to the naked eye: using sophisticated technology, they closely examine the behavior of subatomic particles, the smallest detectable parts of matter.',
+    passage: 'Particle physicists like Ayana Holloway Arce and Aida El-Khadra spend much of their time ______ what is invisible to the naked eye: using sophisticated technology, they closely examine the behavior of subatomic particles, the smallest detectable parts of matter.',
     question: 'Which choice completes the text with the most logical and precise word or phrase?',
     choice1: 'selecting',
     choice2: 'inspecting',
@@ -460,7 +460,7 @@ export const SAT2023PT3RWM2AQ = {
     answer: 'B'
   },
   30: {
-    passage: 'Beginning in the 1950s, Navajo Nation legislator Annie Dodge Wauneka continuously worked to promote public health; this ______blank effort involved traveling throughout the vast Navajo homeland and writing a medical dictionary for speakers of Diné bizaad, the Navajo language.',
+    passage: 'Beginning in the 1950s, Navajo Nation legislator Annie Dodge Wauneka continuously worked to promote public health; this ______ effort involved traveling throughout the vast Navajo homeland and writing a medical dictionary for speakers of Diné bizaad, the Navajo language.',
     question: 'Which choice completes the text with the most logical and precise word or phrase?',
     choice1: 'impartial',
     choice2: 'offhand',
@@ -469,7 +469,7 @@ export const SAT2023PT3RWM2AQ = {
     answer: 'C'
   },
   31: {
-    passage: 'The process of mechanically recycling plastics is often considered ______blank because of the environmental impact and the loss of material quality that often occurs. But chemist Takunda Chazovachii has helped develop a cleaner process of chemical recycling that converts superabsorbent polymers from diapers into a desirable reusable adhesive.',
+    passage: 'The process of mechanically recycling plastics is often considered ______ because of the environmental impact and the loss of material quality that often occurs. But chemist Takunda Chazovachii has helped develop a cleaner process of chemical recycling that converts superabsorbent polymers from diapers into a desirable reusable adhesive.',
     question: 'Which choice completes the text with the most logical and precise word or phrase?',
     choice1: 'resilient',
     choice2: 'inadequate',
@@ -478,7 +478,7 @@ export const SAT2023PT3RWM2AQ = {
     answer: 'B'
   },
   32: {
-    passage: 'Novelist N. K. Jemisin declines to ______blank the conventions of the science fiction genre in which she writes, and she has suggested that her readers appreciate her work precisely because of this willingness to thwart expectations and avoid formulaic plots and themes.',
+    passage: 'Novelist N. K. Jemisin declines to ______ the conventions of the science fiction genre in which she writes, and she has suggested that her readers appreciate her work precisely because of this willingness to thwart expectations and avoid formulaic plots and themes.',
     question: 'Which choice completes the text with the most logical and precise word or phrase?',
     choice1: 'question',
     choice2: 'react to',
@@ -487,7 +487,7 @@ export const SAT2023PT3RWM2AQ = {
     answer: 'D'
   },
   33: {
-    passage: 'In 1929 the Atlantic Monthly published several articles based on newly discovered letters allegedly exchanged between President Abraham Lincoln and a woman named Ann Rutledge. Historians were unable to ______blank the authenticity of the letters, however, and quickly dismissed them as a hoax.',
+    passage: 'In 1929 the Atlantic Monthly published several articles based on newly discovered letters allegedly exchanged between President Abraham Lincoln and a woman named Ann Rutledge. Historians were unable to ______ the authenticity of the letters, however, and quickly dismissed them as a hoax.',
     question: 'Which choice completes the text with the most logical and precise word or phrase?',
     choice1: 'validate',
     choice2: 'interpret',
@@ -623,7 +623,7 @@ Text 2
     answer: 'A'
   },
   45: {
-    passage: 'For thousands of years, people in the Americas ______blank the bottle gourd, a large bitter fruit with a thick rind, to make bottles, other types of containers, and even musical instruments. Oddly, there is no evidence that any type of bottle gourd is native to the Western Hemisphere; either the fruit or its seeds must have somehow been carried from Asia or Africa.',
+    passage: 'For thousands of years, people in the Americas ______ the bottle gourd, a large bitter fruit with a thick rind, to make bottles, other types of containers, and even musical instruments. Oddly, there is no evidence that any type of bottle gourd is native to the Western Hemisphere; either the fruit or its seeds must have somehow been carried from Asia or Africa.',
     question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
     choice1: 'to use',
     choice2: 'have used',
@@ -632,7 +632,7 @@ Text 2
     answer: 'B'
   },
   46: {
-    passage: 'The Alvarez theory, developed in 1980 by physicist Luis Walter Alvarez and his geologist son Walter Alvarez, maintained that the secondary effects of an asteroid impact caused many dinosaurs and other animals to die ______blank it left unexplored the question of whether unrelated volcanic activity might have also contributed to the mass extinctions.',
+    passage: 'The Alvarez theory, developed in 1980 by physicist Luis Walter Alvarez and his geologist son Walter Alvarez, maintained that the secondary effects of an asteroid impact caused many dinosaurs and other animals to die ______ it left unexplored the question of whether unrelated volcanic activity might have also contributed to the mass extinctions.',
     question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
     choice1: 'out but',
     choice2: 'out, but',
@@ -641,7 +641,7 @@ Text 2
     answer: 'B'
   },
   47: {
-    passage: 'To survive when water is scarce, embryos inside African turquoise killifish eggs ______blank a dormant state known as diapause. In this state, embryonic development is paused for as long as two years—longer than the life span of an adult killifish.',
+    passage: 'To survive when water is scarce, embryos inside African turquoise killifish eggs ______ a dormant state known as diapause. In this state, embryonic development is paused for as long as two years—longer than the life span of an adult killifish.',
     question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
     choice1: 'enter',
     choice2: 'to enter',
@@ -650,7 +650,7 @@ Text 2
     answer: 'A'
   },
   48: {
-    passage: 'In his 1963 exhibition Exposition of Music—Electronic Television, Korean American artist Nam June Paik showed how television images could be manipulated to express an artist’s perspective. Today, Paik ______blank considered the first video artist.',
+    passage: 'In his 1963 exhibition Exposition of Music—Electronic Television, Korean American artist Nam June Paik showed how television images could be manipulated to express an artist’s perspective. Today, Paik ______ considered the first video artist.',
     question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
     choice1: 'will be',
     choice2: 'had been',
@@ -659,7 +659,7 @@ Text 2
     answer: 'D'
   },
   49: {
-    passage: 'As British scientist Peter Whibberley has observed, “the Earth is not a very good timekeeper.” Earth’s slightly irregular rotation rate means that measurements of time must be periodically adjusted. Specifically, an extra “leap second” (the 86,401st second of the day) is ______blank time based on the planet’s rotation lags a full nine-tenths of a second behind time kept by precise atomic clocks.',
+    passage: 'As British scientist Peter Whibberley has observed, “the Earth is not a very good timekeeper.” Earth’s slightly irregular rotation rate means that measurements of time must be periodically adjusted. Specifically, an extra “leap second” (the 86,401st second of the day) is ______ time based on the planet’s rotation lags a full nine-tenths of a second behind time kept by precise atomic clocks.',
     question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
     choice1: 'added, whenever',
     choice2: 'added; whenever',
@@ -668,7 +668,7 @@ Text 2
     answer: 'D'
   },
   50: {
-    passage: 'Like other amphibians, the wood frog (Rana sylvatica) is unable to generate its own heat, so during periods of subfreezing temperatures, it ______blank by producing large amounts of glucose, a sugar that helps prevent damaging ice from forming inside its cells.',
+    passage: 'Like other amphibians, the wood frog (Rana sylvatica) is unable to generate its own heat, so during periods of subfreezing temperatures, it ______ by producing large amounts of glucose, a sugar that helps prevent damaging ice from forming inside its cells.',
     question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
     choice1: 'had survived',
     choice2: 'survived',
@@ -677,7 +677,7 @@ Text 2
     answer: 'D'
   },
   51: {
-    passage: 'Chimamanda Ngozi Adichie’s 2013 novel Americanah chronicles the divergent experiences of Ifemelu and Obinze, a young Nigerian couple, after high school. Ifemelu moves to the United States to attend a prestigious university. ______blank Obinze travels to London, hoping to start a career there. However, frustrated with the lack of opportunities, he soon returns to Nigeria.',
+    passage: 'Chimamanda Ngozi Adichie’s 2013 novel Americanah chronicles the divergent experiences of Ifemelu and Obinze, a young Nigerian couple, after high school. Ifemelu moves to the United States to attend a prestigious university. ______ Obinze travels to London, hoping to start a career there. However, frustrated with the lack of opportunities, he soon returns to Nigeria.',
     question: 'Which choice completes the text with the most logical transition?',
     choice1: 'Meanwhile,',
     choice2: 'Nevertheless,',
@@ -686,7 +686,7 @@ Text 2
     answer: 'A'
   },
   52: {
-    passage: 'Before California’s 1911 election to approve a proposition granting women the right to vote, activists across the state sold tea to promote the cause of suffrage. In San Francisco, the Woman’s Suffrage Party sold Equality Tea at local fairs. ______blank in Los Angeles, activist Nancy Tuttle Craig, who ran one of California’s largest grocery store firms, distributed Votes for Women Tea.',
+    passage: 'Before California’s 1911 election to approve a proposition granting women the right to vote, activists across the state sold tea to promote the cause of suffrage. In San Francisco, the Woman’s Suffrage Party sold Equality Tea at local fairs. ______ in Los Angeles, activist Nancy Tuttle Craig, who ran one of California’s largest grocery store firms, distributed Votes for Women Tea.',
     question: 'Which choice completes the text with the most logical transition?',
     choice1: 'For example,',
     choice2: 'To conclude,',
@@ -892,7 +892,7 @@ export const SAT2023PT3RWM2ABD = {
 
 export const SAT2023PT3RWM2BQ = {
   28: {
-    passage: 'Interruptions in the supply chain for microchips used in personal electronics have challenged an economist’s assertion that retailers can expect robust growth in sales of those devices in the coming months. The delays are unlikely to ______blank her projection entirely but will almost certainly extend its time frame.',
+    passage: 'Interruptions in the supply chain for microchips used in personal electronics have challenged an economist’s assertion that retailers can expect robust growth in sales of those devices in the coming months. The delays are unlikely to ______ her projection entirely but will almost certainly extend its time frame.',
     question: 'Which choice completes the text with the most logical and precise word or phrase?',
     choice1: 'dispute',
     choice2: 'withdraw',
@@ -901,7 +901,7 @@ export const SAT2023PT3RWM2BQ = {
     answer: 'D'
   },
   29: {
-    passage: 'Within baleen whale species, some individuals develop an accessory spleen—a seemingly functionless formation of splenetic tissue outside the normal spleen. Given the formation’s greater prevalence among whales known to make deeper dives, some researchers hypothesize that its role isn’t ______blank; rather, the accessory spleen may actively support diving mechanisms.',
+    passage: 'Within baleen whale species, some individuals develop an accessory spleen—a seemingly functionless formation of splenetic tissue outside the normal spleen. Given the formation’s greater prevalence among whales known to make deeper dives, some researchers hypothesize that its role isn’t ______; rather, the accessory spleen may actively support diving mechanisms.',
     question: 'Which choice completes the text with the most logical and precise word or phrase?',
     choice1: 'replicable',
     choice2: 'predetermined',
@@ -910,7 +910,7 @@ export const SAT2023PT3RWM2BQ = {
     answer: 'D'
   },
   30: {
-    passage: 'According to a US tax policy expert, state taxes are ______blank other factors when considering an interstate move. Even significant differences in state taxation have almost no effect on most people’s decisions, while differences in employment opportunities, housing availability, and climate are strong influences.',
+    passage: 'According to a US tax policy expert, state taxes are ______ other factors when considering an interstate move. Even significant differences in state taxation have almost no effect on most people’s decisions, while differences in employment opportunities, housing availability, and climate are strong influences.',
     question: 'Which choice completes the text with the most logical and precise word or phrase?',
     choice1: 'consistent with',
     choice2: 'representative of',
@@ -919,7 +919,7 @@ export const SAT2023PT3RWM2BQ = {
     answer: 'C'
   },
   31: {
-    passage: 'Seminole/Muscogee director Sterlin Harjo ______blank television’s tendency to situate Native characters in the distant past: this rejection is evident in his series Reservation Dogs, which revolves around teenagers who dress in contemporary styles and whose dialogue is laced with current slang.',
+    passage: 'Seminole/Muscogee director Sterlin Harjo ______ television’s tendency to situate Native characters in the distant past: this rejection is evident in his series Reservation Dogs, which revolves around teenagers who dress in contemporary styles and whose dialogue is laced with current slang.',
     question: 'Which choice completes the text with the most logical and precise word or phrase?',
     choice1: 'repudiates',
     choice2: 'proclaims',
@@ -928,7 +928,7 @@ export const SAT2023PT3RWM2BQ = {
     answer: 'A'
   },
   32: {
-    passage: 'In 1929 the Atlantic Monthly published several articles based on newly discovered letters allegedly exchanged between President Abraham Lincoln and a woman named Ann Rutledge. Historians were unable to ______blank the authenticity of the letters, however, and quickly dismissed them as a hoax.',
+    passage: 'In 1929 the Atlantic Monthly published several articles based on newly discovered letters allegedly exchanged between President Abraham Lincoln and a woman named Ann Rutledge. Historians were unable to ______ the authenticity of the letters, however, and quickly dismissed them as a hoax.',
     question: 'Which choice completes the text with the most logical and precise word or phrase?',
     choice1: 'validate',
     choice2: 'interpret',
@@ -950,8 +950,8 @@ export const SAT2023PT3RWM2BQ = {
   34: {
     passage: `The following text is adapted from Zora Neale Hurston’s 1921 short story “John Redding Goes to Sea.” John is a child who lives in a town in the woods.
 
-  Perhaps ten-year-old John was puzzling to the folk there in the Florida woods for he was an imaginative child and fond of day-dreams. The St. John River flowed a scarce three hundred feet from his back door. On its banks at this point grow numerous palms, luxuriant magnolias and bay trees. On the bosom of the stream float millions of delicately colored hyacinths. [John Redding] loved to wander down to the water’s edge, and, casting in dry twigs, watch them sail away down stream to Jacksonville, the sea, the wide world and [he] wanted to follow them.`,
-    question: 'Which choice best describes the function of the underlined sentence in the text as a whole?',
+  Perhaps ten-year-old John was puzzling to the folk there in the Florida woods for he was an imaginative child and fond of day-dreams. The St. John River flowed a scarce three hundred feet from his back door. On its banks at this point grow numerous palms, luxuriant magnolias and bay trees. On the bosom of the stream float millions of delicately colored hyacinths. *[John Redding] loved to wander down to the water’s edge, and, casting in dry twigs, watch them sail away down stream to Jacksonville, the sea, the wide world and [he] wanted to follow them.*`,
+    question: 'Which choice best describes the function of the *starred* sentence in the text as a whole?',
     choice1: 'It provides an extended description of a location that John likes to visit.',
     choice2: 'It reveals that some residents of John’s town are confused by his behavior.',
     choice3: 'It illustrates the uniqueness of John’s imagination compared to the imaginations of other children.',
@@ -959,8 +959,9 @@ export const SAT2023PT3RWM2BQ = {
     answer: 'D'
   },
   35: {
-    passage: 'The following text is from Edith Wharton’s 1905 novel The House of Mirth. Lily Bart and a companion are walking through a park. Lily had no real intimacy with nature, but she had a passion for the appropriate and could be keenly sensitive to a scene which was the fitting background of her own sensations. The landscape outspread below her seemed an enlargement of her present mood, and she found something of herself in its calmness, its breadth, its long free reaches. On the nearer slopes the sugar-maples wavered like pyres of light; lower down was a massing of grey orchards, and here and there the lingering green of an oak-grove.',
-    question: 'Which choice best describes the function of the underlined sentence in the text as a whole?',
+    passage: `The following text is from Edith Wharton’s 1905 novel The House of Mirth. 
+    \tLily Bart and a companion are walking through a park. Lily had no real intimacy with nature, but she had a passion for the appropriate and could be keenly sensitive to a scene which was the fitting background of her own sensations. *The landscape outspread below her seemed an enlargement of her present mood, and she found something of herself in its calmness, its breadth, its long free reaches.* On the nearer slopes the sugar-maples wavered like pyres of light; lower down was a massing of grey orchards, and here and there the lingering green of an oak-grove.`,
+    question: 'Which choice best describes the function of the *starred* sentence in the text as a whole?',
     choice1: 'It creates a detailed image of the physical setting of the scene.',
     choice2: 'It establishes that a character is experiencing an internal conflict.',
     choice3: 'It makes an assertion that the next sentence then expands on.',
@@ -1004,7 +1005,7 @@ Text 2
   39: {
     passage: 'Political scientists who favor the traditional view of voter behavior claim that voting in an election does not change a voter’s attitude toward the candidates in that election. Focusing on each US presidential election from 1976 to 1996, Ebonya Washington and Sendhil Mullainathan tested this claim by distinguishing between subjects who had just become old enough to vote (around half of whom actually voted) and otherwise similar subjects who were slightly too young to vote (and thus none of whom voted). Washington and Mullainathan compared the attitudes of the groups of subjects toward the winning candidate two years after each election.',
     question: 'Which finding from Washington and Mullainathan’s study, if true, would most directly weaken the claim made by people who favor the traditional view of voter behavior?',
-    choice1: 'Which finding from Washington and Mullainathan’s study, if true, would most directly weaken the claim made by people who favor the traditional view of voter behavior?',
+    choice1: 'Subjects’ attitudes toward the winning candidate two years after a given election were strongly predicted by subjects’ general political orientation, regardless of whether subjects were old enough to vote at the time of the election.',
     choice2: 'Subjects who were not old enough to vote in a given election held significantly more positive attitudes towards the winning candidate two years later than they held at the time of the election.',
     choice3: 'Subjects who voted in a given election held significantly more polarized attitudes toward the winning candidate two years later than did subjects who were not old enough to vote in that election.',
     choice4: 'Two years after a given election, subjects who voted and subjects who were not old enough to vote were significantly more likely to express negative attitudes than positive attitudes toward the winning candidate in that election.',
@@ -1030,7 +1031,7 @@ Text 2
     answer: 'C'
   },
   42: {
-    img: 'satpt3rwb42.svg',
+    img: 'satpt3rwb42.png',
     passage: 'Mycorrhizal fungi in soil benefits many plants, substantially increasing the mass of some. A student conducted an experiment to illustrate this effect. The student chose three plant species for the experiment, including two that are mycorrhizal hosts (species known to benefit from mycorrhizal fungi) and one nonmycorrhizal species (a species that doesn’t benefit from and may even be harmed by mycorrhizal fungi). The student then grew several plants from each species both in soil containing mycorrhizal fungi and in soil that had been treated to kill mycorrhizal and other fungi. After several weeks, the student measured the plants’ average mass and was surprised to discover that ______',
     question: 'Which choice most effectively uses data from the table to complete the statement?',
     choice1: 'broccoli grown in soil containing mycorrhizal fungi had a slightly higher average mass than broccoli grown in soil that had been treated to kill fungi.',
@@ -1058,7 +1059,7 @@ Text 2
     answer: 'C'
   },
   45: {
-    passage: 'The forty-seven geothermal springs of Arkansas’ Hot Springs National Park are sourced via a process known as natural groundwater recharge, in which rainwater percolates downward through the earth—in this case, the porous rocks of the hills around Hot ______blank collect in a subterranean basin.',
+    passage: 'The forty-seven geothermal springs of Arkansas’ Hot Springs National Park are sourced via a process known as natural groundwater recharge, in which rainwater percolates downward through the earth—in this case, the porous rocks of the hills around Hot ______ collect in a subterranean basin.',
     question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
     choice1: 'Springs to',
     choice2: 'Springs: to',
@@ -1067,7 +1068,7 @@ Text 2
     answer: 'C'
   },
   46: {
-    passage: 'Journalists have dubbed Gil Scott-Heron the “godfather of rap,” a title that has appeared in hundreds of articles about him since the 1990s. Scott-Heron himself resisted the godfather ______blank feeling that it didn’t encapsulate his devotion to the broader African American blues music tradition as well as “bluesologist,” the moniker he preferred.',
+    passage: 'Journalists have dubbed Gil Scott-Heron the “godfather of rap,” a title that has appeared in hundreds of articles about him since the 1990s. Scott-Heron himself resisted the godfather ______ feeling that it didn’t encapsulate his devotion to the broader African American blues music tradition as well as “bluesologist,” the moniker he preferred.',
     question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
     choice1: 'nickname, however',
     choice2: 'nickname, however;',
@@ -1076,7 +1077,7 @@ Text 2
     answer: 'C'
   },
   47: {
-    passage: 'Over twenty years ago, in a landmark experiment in the psychology of choice, professor Sheena Iyengar set up a jam-tasting booth at a grocery store. The number of jams available for tasting ______blank some shoppers had twenty-four different options, others only six. Interestingly, the shoppers with fewer jams to choose from purchased more jam.',
+    passage: 'Over twenty years ago, in a landmark experiment in the psychology of choice, professor Sheena Iyengar set up a jam-tasting booth at a grocery store. The number of jams available for tasting ______ some shoppers had twenty-four different options, others only six. Interestingly, the shoppers with fewer jams to choose from purchased more jam.',
     question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
     choice1: 'varied:',
     choice2: 'varied,',
@@ -1085,7 +1086,7 @@ Text 2
     answer: 'A'
   },
   48: {
-    passage: 'Working from an earlier discovery of Charpentier’s, chemists Emmanuelle Charpentier and Jennifer Doudna—winners of the 2020 Nobel Prize in Chemistry—re-created and then reprogrammed the so-called “genetic scissors” of a species of DNA-cleaving bacteria ______blank a tool that is revolutionizing the field of gene technology.',
+    passage: 'Working from an earlier discovery of Charpentier’s, chemists Emmanuelle Charpentier and Jennifer Doudna—winners of the 2020 Nobel Prize in Chemistry—re-created and then reprogrammed the so-called “genetic scissors” of a species of DNA-cleaving bacteria ______ a tool that is revolutionizing the field of gene technology.',
     question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
     choice1: 'to forge',
     choice2: 'forging',
@@ -1094,7 +1095,7 @@ Text 2
     answer: 'A'
   },
   49: {
-    passage: 'A study published by Rice University geoscientist Ming Tang in 2019 offers a new explanation for the origin of Earth’s ______blank structures called arcs, towering ridges that form when a dense oceanic plate subducts under a less dense continental plate, melts in the mantle below, and then rises and bursts through the continental crust above.',
+    passage: 'A study published by Rice University geoscientist Ming Tang in 2019 offers a new explanation for the origin of Earth’s ______ structures called arcs, towering ridges that form when a dense oceanic plate subducts under a less dense continental plate, melts in the mantle below, and then rises and bursts through the continental crust above.',
     question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
     choice1: 'continents geological',
     choice2: 'continents: geological',
@@ -1103,7 +1104,7 @@ Text 2
     answer: 'B'
   },
   50: {
-    passage: 'A firefly uses specialized muscles to draw oxygen into its lower abdomen through narrow tubes, triggering a chemical reaction whereby the oxygen combines with chemicals in the firefly’s abdomen to produce a glow. ______blank when the firefly stops drawing in oxygen, the reaction—and the glow—cease.',
+    passage: 'A firefly uses specialized muscles to draw oxygen into its lower abdomen through narrow tubes, triggering a chemical reaction whereby the oxygen combines with chemicals in the firefly’s abdomen to produce a glow. ______ when the firefly stops drawing in oxygen, the reaction—and the glow—cease.',
     question: 'Which choice completes the text with the most logical transition?',
     choice1: 'For instance,',
     choice2: 'By contrast,',
@@ -1166,7 +1167,8 @@ Text 2
   -One way it acquires food is by using its hook-tipped bill to snatch prey from the surface of the water.
   -Another way it acquires food is by taking it from weaker birds by force.
   -This behavior is known as kleptoparasitism.`,
-    choice1: 'The student wants to emphasize a similarity between the two ways a magnificent frigatebird acquires food. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
+    question: 'The student wants to emphasize a similarity between the two ways a magnificent frigatebird acquires food. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
+    choice1: 'A magnificent frigatebird never dives into the water, instead using its hook-tipped bill to snatch prey from the surface.',
     choice2: 'Neither of a magnificent frigatebird’s two ways of acquiring food requires the bird to dive into the water.',
     choice3: 'Of the magnificent frigatebird’s two ways of acquiring food, only one is known as kleptoparasitism.',
     choice4: 'In addition to snatching prey from the water with its hook-tipped bill, a magnificent frigatebird takes food from other birds by force.',
@@ -1195,7 +1197,7 @@ export const SAT2023PT3RWM2BBD = {
   31:{
       contentdomain: 'Craft and Structure',
       skill: 'Words in Context',
-      difficulty: 'Bronze',
+      difficulty: 'Gold',
       answer:'a'
   },
   32:{
@@ -1827,7 +1829,7 @@ export const SAT2023PT3MM2ABD = {
       difficulty: 'Bronze'
   },
   83: {
-      contentdomain: 'Graphing Nonlinear Functions',
+      contentdomain: 'Passport to Advanced Math',
       skill: 'Graphing Nonlinear Functions',
       difficulty: 'Bronze'
   },
@@ -1878,7 +1880,7 @@ export const SAT2023PT3MM2ABD = {
   },
   93: {
       contentdomain: 'Heart of Algebra',
-      skill: 'Creating Quadratic and Exponential Functions',
+      skill: 'One-Variable Equations',
       difficulty: 'Silver'
   },
   94: {
@@ -2184,7 +2186,7 @@ export const SAT2023PT3MM2BBD = {
   },
   97: {
       contentdomain: 'Heart of Algebra',
-      skill: 'Building Linear Equations',
+      skill: 'Building Linear Functions',
       difficulty: 'Bronze'
   },
   98: {
