@@ -63,60 +63,104 @@ const useGrade = () => {
     
     //MODULE READING 2
     for (let i = 28; i <= 54; i++){
-      if((currentAnswers[i] == SAT2023PT3RWM2AQ[i].answer) && Rwrongcounter > 12){
-        totalright++
-      } else if ((currentAnswers[i] == SAT2023PT3RWM2BQ[i].answer) && Rwrongcounter <= 12) {
-        totalright++
-      } else if (Rwrongcounter <= 12){
-        totalwrong++
-        readingwrong++
-        categoriesRW[SAT2023PT3RWM2BBD[i].skill] = categoriesRW[SAT2023PT3RWM2BBD[i].skill] + READV  || READV
-        difficultiesRW[SAT2023PT3RWM2BBD[i].difficulty] = difficultiesRW[SAT2023PT3RWM2BBD[i].difficulty] + 1 || 1
-      } else if (Rwrongcounter > 12){
-        totalwrong++
-        readingwrong++
-        categoriesRW[SAT2023PT3RWM2ABD[i].skill] = categoriesRW[SAT2023PT3RWM2ABD[i].skill] + READV  || READV
-        difficultiesRW[SAT2023PT3RWM2ABD[i].difficulty] = difficultiesRW[SAT2023PT3RWM2ABD[i].difficulty] + 1 || 1
-      }
+        if((currentAnswers[i] == SAT2023PT3RWM2AQ[i].answer) && Rwrongcounter > 12){
+          totalright++
+        } else if ((currentAnswers[i] == SAT2023PT3RWM2BQ[i].answer) && Rwrongcounter <= 12) {
+          totalright++
+        } else if (Rwrongcounter <= 12){
+          totalwrong++
+          readingwrong++
+          categoriesRW[SAT2023PT3RWM2BBD[i].skill] = categoriesRW[SAT2023PT3RWM2BBD[i].skill] + READV  || READV
+          difficultiesRW[SAT2023PT3RWM2BBD[i].difficulty] = difficultiesRW[SAT2023PT3RWM2BBD[i].difficulty] + 1 || 1
+        } else if (Rwrongcounter > 12){
+          totalwrong++
+          readingwrong++
+          categoriesRW[SAT2023PT3RWM2ABD[i].skill] = categoriesRW[SAT2023PT3RWM2ABD[i].skill] + READV  || READV
+          difficultiesRW[SAT2023PT3RWM2ABD[i].difficulty] = difficultiesRW[SAT2023PT3RWM2ABD[i].difficulty] + 1 || 1
+        }
     }
 
     //MODULE MATH 1
     for (let i = 55; i <= 76; i++){
       //if right then skip
       //if wrong or blank then add to data
-      if(currentAnswers[i] == SAT2023PT3MM1Q[i].answer){
-        totalright++
-      } else {
-        Mwrongcounter++
-        totalwrong++
-        mathwrong++
-        categoriesM[SAT2023PT3MM1BD[i].skill] = categoriesM[SAT2023PT3MM1BD[i].skill] + MATHV  || MATHV
-        difficultiesM[SAT2023PT3MM1BD[i].difficulty] = difficultiesM[SAT2023PT3MM1BD[i].difficulty] + 1 || 1
+
+      //letter choices
+      //if 
+      if(!/\d/.test(currentAnswers[i]))
+      {
+        if(currentAnswers[i] == SAT2023PT3MM1Q[i].answer){
+          totalright++
+        } else {
+          Mwrongcounter++
+          totalwrong++
+          mathwrong++
+          categoriesM[SAT2023PT3MM1BD[i].skill] = categoriesM[SAT2023PT3MM1BD[i].skill] + MATHV  || MATHV
+          difficultiesM[SAT2023PT3MM1BD[i].difficulty] = difficultiesM[SAT2023PT3MM1BD[i].difficulty] + 1 || 1
+        }
+      }
+
+      //free response math
+      if(/\d/.test(currentAnswers[i])){
+
+        const floated = eval(currentAnswers[i])
+        if(floated == SAT2023PT3MM1Q[i].answer){
+          totalright++
+        } else {
+          Mwrongcounter++
+          totalwrong++
+          mathwrong++
+          categoriesM[SAT2023PT3MM1BD[i].skill] = categoriesM[SAT2023PT3MM1BD[i].skill] + MATHV  || MATHV
+          difficultiesM[SAT2023PT3MM1BD[i].difficulty] = difficultiesM[SAT2023PT3MM1BD[i].difficulty] + 1 || 1
+        }
       }
     }
 
     //MODULE MATH 2
     for (let i = 77; i <= 98; i++){
-      if(currentAnswers[i] == SAT2023PT3MM2AQ[i].answer && Mwrongcounter > 10){
-        totalright++
-      } else if (currentAnswers[i] == SAT2023PT3MM2BQ[i].answer && Mwrongcounter <= 10) {
-        totalright++
-      } else if (Mwrongcounter <= 10){
-        //hard version
-        totalwrong++
-        mathwrong++
-        categoriesM[SAT2023PT3MM2BBD[i].skill] = categoriesM[SAT2023PT3MM2BBD[i].skill] + MATHV  || MATHV
-        difficultiesM[SAT2023PT3MM2BBD[i].difficulty] = difficultiesM[SAT2023PT3MM2BBD[i].difficulty] + 1 || 1
-      } else if (Mwrongcounter > 10){
-        //easy version
-        totalwrong++
-        mathwrong++
-        categoriesM[SAT2023PT3MM2ABD[i].skill] = categoriesM[SAT2023PT3MM2ABD[i].skill] + MATHV  || MATHV
-        difficultiesM[SAT2023PT3MM2ABD[i].difficulty] = difficultiesM[SAT2023PT3MM2ABD[i].difficulty] + 1 || 1
+
+      if(!/\d/.test(currentAnswers[i])){
+        if(currentAnswers[i] == SAT2023PT3MM2AQ[i].answer && Mwrongcounter > 10){
+          totalright++
+        } else if (currentAnswers[i] == SAT2023PT3MM2BQ[i].answer && Mwrongcounter <= 10) {
+          totalright++
+        } else if (Mwrongcounter <= 10){
+          //hard version
+          totalwrong++
+          mathwrong++
+          categoriesM[SAT2023PT3MM2BBD[i].skill] = categoriesM[SAT2023PT3MM2BBD[i].skill] + MATHV  || MATHV
+          difficultiesM[SAT2023PT3MM2BBD[i].difficulty] = difficultiesM[SAT2023PT3MM2BBD[i].difficulty] + 1 || 1
+        } else if (Mwrongcounter > 10){
+          //easy version
+          totalwrong++
+          mathwrong++
+          categoriesM[SAT2023PT3MM2ABD[i].skill] = categoriesM[SAT2023PT3MM2ABD[i].skill] + MATHV  || MATHV
+          difficultiesM[SAT2023PT3MM2ABD[i].difficulty] = difficultiesM[SAT2023PT3MM2ABD[i].difficulty] + 1 || 1
+        }
+      }
+
+      if(/\d/.test(currentAnswers[i])){
+        const floated = eval(currentAnswers[i])
+        if(floated == SAT2023PT3MM2AQ[i].answer && Mwrongcounter > 10){
+          totalright++
+        } else if(floated == SAT2023PT3MM2BQ[i].answer && Mwrongcounter <= 10) {
+          totalright++
+        } else if (Mwrongcounter > 10){
+          totalwrong++
+          mathwrong++
+          categoriesM[SAT2023PT3MM2ABD[i].skill] = categoriesM[SAT2023PT3MM2ABD[i].skill] + MATHV  || MATHV
+          difficultiesM[SAT2023PT3MM2ABD[i].difficulty] = difficultiesM[SAT2023PT3MM2ABD[i].difficulty] + 1 || 1
+        } else if(Mwrongcounter < 10){
+          //hard version
+          totalwrong++
+          mathwrong++
+          categoriesM[SAT2023PT3MM2BBD[i].skill] = categoriesM[SAT2023PT3MM2BBD[i].skill] + MATHV  || MATHV
+          difficultiesM[SAT2023PT3MM2BBD[i].difficulty] = difficultiesM[SAT2023PT3MM2BBD[i].difficulty] + 1 || 1
+        }
       }
     }
 
-
+    
     //calculated scores
     const readingRight = 54 - readingwrong
     const mathRight = 44 - mathwrong
@@ -307,16 +351,16 @@ const useGrade = () => {
       algebrexpressp = 100 - Math.round(skillsM.skills['Algebraic Expressions'] / (2 * MATHV) * 100)
       buildinglinp = 100 - Math.round(skillsM.skills['Building Linear Functions'] / (3 * MATHV) * 100)
       circlearcsp = 100 - Math.round(skillsM.skills['Circle Arcs, Angles and Chords'] / MATHV * 100)
-      createquadp = 100 - Math.round(skillsM.skills['Creating Quadratic and Exponential Functions'] / (3 * MATHV) * 100)
+      createquadp = 100 - Math.round(skillsM.skills['Creating Quadratic and Exponential Functions'] / (2 * MATHV) * 100)
       creatingonep = 100 - Math.round(skillsM.skills['Creating One-Variable Equations'] / MATHV * 100)
       expresscontextp = 100 - Math.round(skillsM.skills['Expressions and Equations in Context'] / MATHV * 100)
       functionnotationp = 100 - Math.round(skillsM.skills['Function Notation'] / MATHV * 100)
       graphinglinearp = 100 - Math.round(skillsM.skills['Graphing Linear Relationships'] / MATHV * 100)
       graphingnonlinearp = 100 - Math.round(skillsM.skills['Graphing Nonlinear Functions'] / MATHV * 100)
       interpretlinp = 100 - Math.round(skillsM.skills['Interpreting Linear Functions'] / (2 * MATHV) * 100)
-      linearinequalp = 100 - Math.round(skillsM.skills['Linear Inequalities'] / MATHV * 100)
+      linearinequalp = 100 - Math.round(skillsM.skills['Linear Inequalities'] / (2 * MATHV) * 100)
       linearvsp = 100 - Math.round(skillsM.skills['Linear vs. Exponential Growth'] / MATHV * 100)
-      onevariablep = 100 - Math.round(skillsM.skills['One-Variable Equations']  / (5 * MATHV) * 100)
+      onevariablep = 100 - Math.round(skillsM.skills['One-Variable Equations']  / (6 * MATHV) * 100)
       rationalexpressp = 100 - Math.round(skillsM.skills['Rational Expressions and Equations'] / (2 *MATHV) * 100)
       ratiosp = 100 - Math.round(skillsM.skills['Ratios, Rates and Proportions'] / (2 * MATHV) * 100)
       scatterp = 100 - Math.round(skillsM.skills['Scatterplots and Graphs'] / (3 * MATHV) * 100)
@@ -325,7 +369,7 @@ const useGrade = () => {
       statsp = 100 - Math.round(skillsM.skills['Statistics - Shape, Center, Spread'] / (2 * MATHV) * 100)
       systemslinp = 100 - Math.round(skillsM.skills['Systems of Linear Equations'] / (2 * MATHV) * 100)
       systemsquadp = 100 - Math.round(skillsM.skills['Systems of Quadratic and Linear Functions'] / MATHV * 100)
-      trianglesp = 100 - Math.round(skillsM.skills['Triangles, Lines and Angles'] / 3 * MATHV * 100)
+      trianglesp = 100 - Math.round(skillsM.skills['Triangles, Lines and Angles'] / (3 * MATHV) * 100)
     } else if (Mwrongcounter <= 12){
       //hard version
       algebrexpressp = 100 - Math.round(skillsM.skills['Algebraic Expressions'] / MATHV * 100)

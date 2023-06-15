@@ -221,7 +221,7 @@ const Test = ({testnumber}) => {
             currentTest && Object.keys(currentTest).map(i => {
               if(i == questionNumber){
               }
-              return <div key={i} onClick={() => changeQuestion(i)} className={currentAnswers.hasOwnProperty(i) ? 'answered-nav-button' : questionNumber == i ? 'active-nav-button' : 'nav-button'}>{i}</div>
+              return <div key={i} onClick={() => changeQuestion(i)} className={questionNumber == i ? 'active-nav-button' : currentAnswers.hasOwnProperty(i) ? 'answered-nav-button' :  'nav-button'}>{i}</div>
             })
           }
         </div>

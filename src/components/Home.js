@@ -25,7 +25,6 @@ const Home = () => {
   const unfinishedtests = useCollection(`students/${user.uid}/tests`)  
 
   const students = useCollection('students')
-
   
   const tests = useCollection(currentStudent ? `students/${currentStudent.id}/tests`: 'students')  
 

@@ -57,7 +57,7 @@ I HEAR it is charged against me that I seek to destroy institutions; But really 
     choice2: 'The speaker regrets his isolation from others, then predicts a profound change in society.',
     choice3: 'The speaker concedes his personal shortcomings, then boasts of his many achievements.',
     choice4: 'The speaker addresses a criticism leveled against him, then announces a grand ambition of his.',
-    answer: 'A'   
+    answer: 'D'   
   },
   7: {
     passage: 'Utah is home to Pando, a colony of about 47,000 quaking aspen trees that all share a single root system. Pando is one of the largest single organisms by mass on Earth, but ecologists are worried that its growth is declining in part because of grazing by animals. The ecologists say that strong fences could prevent deer from eating young trees and help Pando start thriving again.',
@@ -783,7 +783,7 @@ export const SAT2023PT3RWM2ABD = {
       contentdomain: 'Information and Ideas',
       skill: 'Central Ideas and Details',
       difficulty: 'Silver',
-      answer: 'd'
+      answer: 'c'
   },
   38:{
       contentdomain: 'Information and Ideas',
@@ -1506,7 +1506,6 @@ export const SAT2023PT3MM1BD = {
       contentdomain: 'Heart of Algebra',
       skill:'One-Variable Equations',
       difficulty: 'Bronze',
-      answer: 'c'
   },
   56:{
       contentdomain: 'Heart of Algebra',
@@ -1958,9 +1957,9 @@ export const SAT2023PT3MM2BQ = {
   82: {
     img: 'satpt3mb6.png',
     choice1img: 'satpt3mb6-1.svg',
-    choice1img: 'satpt3mb6-2.svg',
-    choice1img: 'satpt3mb6-3.svg',
-    choice1img: 'satpt3mb6-4.svg',
+    choice2img: 'satpt3mb6-2.svg',
+    choice3img: 'satpt3mb6-3.svg',
+    choice4img: 'satpt3mb6-4.svg',
     answer: 'B'
   },
   //7
@@ -2047,10 +2046,10 @@ export const SAT2023PT3MM2BQ = {
   },
   94: {
     img: 'satpt3mb18.png',
-    choice1: 'satpt3mb18-1.svg',
-    choice2: 'satpt3mb18-2.svg',
-    choice3: 'satpt3mb18-3.svg',
-    choice4: 'satpt3mb18-4.svg',
+    choice1img: 'satpt3mb18-1.svg',
+    choice2img: 'satpt3mb18-2.svg',
+    choice3img: 'satpt3mb18-3.svg',
+    choice4img: 'satpt3mb18-4.svg',
     answer: 'B'
   },
   95: {
@@ -2059,7 +2058,7 @@ export const SAT2023PT3MM2BQ = {
     choice2: '10',
     choice3: '20',
     choice4: '40',
-    answer: 'A'
+    answer: 'B'
   },
   96: {
     img: 'satpt3mb20.png',
@@ -2072,7 +2071,7 @@ export const SAT2023PT3MM2BQ = {
     choice2: 'f(x) = 60x + 220',
     choice3: 'f(x) = 80x',
     choice4: 'f(x) = 80x + 200',
-    answer: 'B'
+    answer: 'A'
   },
   98: {
     img: 'satpt3mb22.png',

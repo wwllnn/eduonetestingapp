@@ -99,12 +99,12 @@ const TestPrint = ({ info }) => {
 
         <View style={{display: 'flex', flexDirection: 'row', padding: 5, marginLeft: 100}}>
           <View style={{flex: 1, textAlign: 'center', fontFamily: 'IBM Plex Sans-SemiBold', fontSize: 12, flexDirection: 'row'}}>
-            <Text style={{color: 'maroon', marginLeft: '5px'}}>{info.readingRight}</Text>
+            <Text style={{color: 'maroon'}}>{info.readingRight}</Text>
             <Text>/54</Text>
           </View>
 
           <View style={{flex: 1, fontFamily: 'IBM Plex Sans-SemiBold', fontSize: 12, flexDirection: 'row', marginLeft: 110}}>
-            <Text style={{color: 'maroon', marginLeft: '5px'}}>{info.mathRight}</Text>
+            <Text style={{color: 'maroon'}}>{info.mathRight}</Text>
             <Text>/44</Text>
           </View>
         </View>
